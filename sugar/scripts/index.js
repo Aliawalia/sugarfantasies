@@ -313,3 +313,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+//cbox
+
+    chattable.initialize({
+        stylesheet: "/css/chattable.css"
+    });
