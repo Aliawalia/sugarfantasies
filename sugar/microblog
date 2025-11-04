@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Microblog</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="UTF-8" />
+        
+        <link href="css/micro.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <div class="container">
+            <img src="micro/top.webp" class="top">
+            <img src="micro/bottom.webp" class="bottom">
+            <div class="inner">
+                
+                <div class="entry">
+                    <span>11/4 <img src="micro/apple.webp"> I LOVE GINGER HUZZ!!</span>
+                    <HR>
+                    <p>Golly gosh we talked like twice but i am CONVINCED he likes me. litterally all we do is stare at eachother at class idek what hes doing really. Whatever!! I enjoy looking at him anyways!! lets hope tomorrow he asks for my number..haha...</p>
+                </div>
+            
+            </div>
+        </div>
+    </body>
+</html>
