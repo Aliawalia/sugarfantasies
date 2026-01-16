@@ -1,0 +1,55 @@
+html {
+    scrollbar-color: #e1ff75 #ffffe8;
+}
+body {
+    background: url(/micro/bg.webp);
+}
+.container {
+    background: url(/micro/inner.webp);
+    padding: 10px;
+    height: 540px;
+    max-width: 670px;
+    margin: 0 auto;
+    border: 1px solid #d0b073;
+    outline: 1px dotted #302209;
+    outline-offset: 1px;
+    margin-top: 3em;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.entry {
+    width: 90%;
+    height: 21%;
+    background: linear-gradient(180deg, #fff7d9, #ffeeb0);
+    border: solid 1px #ffe19e;
+    margin: 0 auto;
+    color: #6f4c21;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    overflow: auto;
+}
+span img {
+    height: 15px;
+}
+hr {
+    border: dotted 1px #0076c1;
+}
+p {
+    margin: 0;
+}
+.entries {
+    overflow: auto;
+    width: 60%;
+    background: url(/micro/panel.webp);
+    padding: 5px;
+    box-shadow:
+        -2px 3px 5px inset white,
+        1px -2px 2px inset #e0b78d;
+}
+.side {
+    background: url(/micro/blab.webp);
+    background-size: 100% 100%;
+    width: 40%;
+}
