@@ -1,0 +1,110 @@
+body {
+    background-image: url(/portfolio/bg.webp);
+    background-color: #fffdeb;
+}
+.container {
+    max-width: 900px;
+    background: white;
+    height: auto;
+    margin: 0 auto;
+    border-image-slice: 17 17 17 17;
+    border-image-width: 17px 17px 17px 17px;
+    border-image-outset: 17px 17px 17px 17px;
+    border-image-repeat: repeat repeat;
+    border-image-source: url("/portfolio/lace.webp");
+    border-style: solid;
+    margin-top: 3em;
+    background: #ffeadd;
+    padding: 10px;
+    filter: drop-shadow(0px 0px 1px #cb761e);
+    margin-bottom: 2em;
+}
+.wrapper {
+    display: flex;
+    background: #f2c7a2;
+    padding: 5px;
+    height: 300px;
+    border-radius: 5px;
+    border: double #734a27;
+    box-shadow: 0px 0px 3px inset #303030;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+.wrapper img {
+    width: 40%;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.wrapper img:hover {
+    border: double #734a27;
+    transition: 0.1s;
+}
+.content {
+    width: 58%;
+    background: #e5f5de;
+    border-radius: 10px;
+    border: 1px dashed #799e6a;
+    outline: 5px solid white;
+    height: fit-content;
+    margin-top: 5px;
+}
+.title {
+    background: linear-gradient(#ffdeb7 30%, #dfc49b 100%);
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px;
+    border-bottom: 1px solid #799e6a;
+    font-style: italic;
+}
+span {
+    float: right;
+    color: #9d6a3d;
+}
+p {
+    margin: 5px;
+}
+p:hover {
+    padding: 5px;
+    background: #ffd6ab;
+}
+.left {
+    margin-left: 5px;
+}
+.bottom {
+    margin: 0;
+}
+.wide {
+    width: 64%;
+}
+
+@media (max-width: 975px) {
+    .container {
+        border: 1px dashed;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 875px) {
+    .container {
+        max-width: 600px;
+    }
+    .wrapper {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+    .wrapper img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        order: 2;
+    }
+    .content {
+        margin: 0 auto;
+        width: 95%;
+        margin-bottom: 5px;
+        order: 1;
+    }
+    span {
+        float: initial;
+    }
+}
