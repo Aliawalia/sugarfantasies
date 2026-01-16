@@ -1,0 +1,121 @@
+body {
+    background: url(/ethel/bg.webp);
+    background-size: cover;
+    background-position: 0% 25%;
+    padding: 0.1px;
+    background-attachment: fixed;
+}
+.container {
+    border-image-slice: 17 17 17 17;
+    border-image-width: 17px 17px 17px 17px;
+    border-image-outset: 17px 17px 17px 17px;
+    border-image-repeat: repeat repeat;
+    border-image-source: url("/ethel/lace.webp");
+    border-style: solid;
+    background-color: rgba(185, 164, 92, 0.4);
+    width: 780px;
+    padding: 10px;
+    margin-top: 2em;
+    float: right;
+    margin-right: 2em;
+    margin-bottom: 5em;
+    position: relative;
+}
+.page {
+    text-align: center;
+    transition: 0.5s;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 1em;
+}
+#home:hover {
+    background-color: rgba(231, 209, 168, 0.8);
+}
+
+.leftimg {
+    float: left !important;
+}
+#home img {
+    width: 30%;
+    float: right;
+    margin: 5px;
+}
+#home i {
+    color: #339018;
+    background-color: #fffdc5;
+    padding: 2px;
+}
+.all {
+    width: 100%;
+    margin-top: 5px;
+}
+#home {
+    padding-bottom: 7em;
+}
+#lore:hover {
+    background-color: rgba(219, 231, 168, 0.8);
+}
+
+mark {
+    background-color: rgb(130, 151, 154);
+    color: white;
+}
+#lore img {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+#unreleased:hover {
+    background-color: rgba(168, 231, 212, 0.8);
+}
+#about:hover {
+    background-color: rgba(168, 219, 231, 0.8);
+}
+#music:hover {
+    background-color: rgba(231, 173, 168, 0.8);
+}
+nav {
+    border-image-slice: 17 17 17 17;
+    border-image-width: 17px 17px 17px 17px;
+    border-image-outset: 17px 17px 17px 17px;
+    border-image-repeat: repeat repeat;
+    border-image-source: url("/ethel/lace.webp");
+    border-style: solid;
+    position: fixed;
+    z-index: 10;
+    transform: translate(-120%, 20%);
+    background-color: #dbcaa8;
+    width: 250px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+a {
+    background: #5a3d1f;
+    color: #afa48c;
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.5s;
+
+    margin-top: 5px;
+}
+a:hover {
+    outline: 1px solid #474f0e;
+    outline-offset: 2px;
+}
+nav a:nth-child(1) {
+    margin: 0;
+}
+
+@media (max-width: 1170px) {
+    nav {
+        position: fixed;
+        transform: translate(-55%, 390%);
+    }
+    .container {
+        margin: 0 auto;
+        float: none;
+    }
+}
