@@ -1,0 +1,142 @@
+body {
+    background: url(/about/bg.webp);
+}
+.container {
+    margin: 0 auto;
+    width: 1050px;
+    height: 600px;
+    margin-top: 7em;
+    position: relative;
+    display: grid;
+    grid-template-areas:a
+        "intro intro  img img img flex  flex flex"
+        "intro intro  likes likes likes flex flex flex"
+        "stats stats  likes likes likes flex flex flex"
+        "stats stats  img2 img2 img2 flex flex flex"
+        "stats stats  dis dis dis flex flex flex"
+        "stats stats  dis dis dis flex flex flex";
+    gap: 5px;
+    grid-template-columns: 15% 15% 5% 5% 15%;
+    grid-template-rows: 25% 10% 10% 25% 10% 10%;
+}
+.stats {
+    grid-area: stats;
+}
+
+.img2 {
+    grid-area: img2;
+    background: url(/about/img2.webp);
+    background-size: cover;
+}
+
+.intro {
+    grid-area: intro;
+    background-color: rgba(226, 236, 208, 0.85);
+    position: relative;
+}
+h1 {
+    margin: 0;
+    text-shadow:
+        -1px 0 #682800,
+        0 1px #682800,
+        1px 0 #682800,
+        0 -1px #682800,
+        0 0;
+    font-family: "Gabriela";
+    color: white;
+    font-style: italic;
+    position: absolute;
+    bottom: -10px;
+}
+.intro p {
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    height: 80%;
+    box-shadow: 0px 0px 3px inset #a5a5a5;
+    overflow: auto;
+}
+
+table,
+td {
+    border-collapse: collapse;
+    border: 1px solid #d5b3a3;
+    padding: 6px;
+    margin-top: 10px;
+    background: linear-gradient(0deg, rgb(255, 240, 203) 0%, rgb(255, 250, 231) 100%);
+}
+
+.img {
+    grid-area: img;
+    background: url(/about/img1.webp);
+    background-size: cover;
+}
+
+.likes {
+    grid-area: likes;
+    background-color: #e5c6a6;
+    border: double white;
+    display: flex;
+}
+.side {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #9f8767;
+    margin: 0px;
+    padding: 5px;
+    height: 109px;
+    border-right: 1px solid white;
+}
+p {
+    margin: 5px;
+}
+.two {
+    letter-spacing: -2.5px;
+    float: right;
+    border-left: 1px solid white;
+}
+
+.dislikes {
+    grid-area: dis;
+    background-color: #e5c6a6;
+    border: double white;
+}
+.albums img {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.albums {
+    overflow: auto;
+    padding: 1px;
+    width: 30%;
+}
+
+.questions {
+    background-color: #faf2d7;
+    width: 66%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px inset #a5a5a5;
+    padding: 5px;
+    overflow: auto;
+}
+.flex {
+    grid-area: flex;
+    display: flex;
+    gap: 5px;
+}
+dl {
+    padding: 5px;
+}
+
+dt {
+    color: #654c36;
+}
+
+dd {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
