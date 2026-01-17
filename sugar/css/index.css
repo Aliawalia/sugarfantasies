@@ -436,9 +436,9 @@ main p {
 
 .flower1 {
     position: absolute;
-    height: 40%;
-    left: 18em;
-    top: 23em;
+    height: 40%;  
+    left: 22em;
+    top: 25em;
     z-index: 1;
 }
 .flower2 {
