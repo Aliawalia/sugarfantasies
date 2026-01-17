@@ -8,7 +8,7 @@ body {
     margin-top: 7em;
     position: relative;
     display: grid;
-    grid-template-areas:a
+    grid-template-areas:
         "intro intro  img img img flex  flex flex"
         "intro intro  likes likes likes flex flex flex"
         "stats stats  likes likes likes flex flex flex"
