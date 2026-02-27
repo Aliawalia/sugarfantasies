@@ -1,39 +1,46 @@
-var lastfmData = {
-    baseURL: "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=",
-    user: "aliawalia",
-    // API
-    api_key: "4f9b192a761908e1ad7c834d252a2b56",
-    additional: "&format=json&limit=1",
-};
 
-var getSetLastFM = function () {
-    $.ajax({
-        type: "GET",
-        url: lastfmData.baseURL + lastfmData.user + "&api_key=" + lastfmData.api_key + lastfmData.additional,
-        dataType: "json",
-        success: function (resp) {
-            var recentTrack = resp.recenttracks.track[0];
-            var formatted = "" + recentTrack.name;
-            $("a#tracktitle")
-                .html(formatted)
-                .attr("href", recentTrack.url)
-                .attr("title", recentTrack.name + " by " + recentTrack.artist["#text"])
-                .attr("target", "_blank");
+            (() => {
+                const API_URL = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=aliawalia&api_key=4f9b192a761908e1ad7c834d252a2b56&format=json&limit=1';
 
-            var artistFormatted = "" + recentTrack.artist["#text"];
-            $("a#trackartist")
-                .html(artistFormatted)
-                .attr("title", "Artist : " + recentTrack.artist["#text"]);
-            $("img#trackart").attr("src", recentTrack.image[2]["#text"]);
-        },
-        error: function (resp) {
-            $("a#tracktitle").html("error");
-            $("img#trackart").attr("src", "https://sugarfantasies.neocities.org/index/bg.webp");
-            var artistFormatted = ":(";
-            $("a#trackartist").html(artistFormatted).attr("href", "www.prashant.me/");
-        },
-    });
-};
+                const albumArt     = document.getElementById('albumArt');
+                const trackLink    = document.getElementById('trackLink');
+                const trackWrapper = document.getElementById('trackWrapper');
+                const statusText   = document.getElementById('statusText');
 
-getSetLastFM();
-setInterval(getSetLastFM, 10 * 1000);
+                let fetchId = null;
+
+                async function fetchRecentTrack() {
+                    try {
+                        const res  = await fetch(`${API_URL}&_=${Date.now()}`);
+                        const data = await res.json();
+                        const track = data?.recenttracks?.track?.[0];
+                        if (!track) return;
+
+                        const artist = track.artist['#text'];
+                        const name   = track.name;
+
+                        trackLink.textContent = `♪ ${artist} - ${name}`;
+                        trackLink.href        = track.url || '#';
+                        trackLink.title       = `${name} by ${artist}`;
+                        albumArt.src          = track.image?.[3]?.['#text'] ?? '';
+                        trackWrapper.style.display = 'block';
+
+                        statusText.textContent = track['@attr']?.nowplaying === 'true'
+                            ? 'Listening to...'
+                            : 'Recently played...';
+                    } catch {
+                    }
+                }
+
+                fetchRecentTrack();
+                fetchId = setInterval(fetchRecentTrack, 30_000);
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        clearInterval(fetchId);
+                    } else {
+                        fetchRecentTrack();
+                        fetchId = setInterval(fetchRecentTrack, 30_000);
+                    }
+                });
+            })();
