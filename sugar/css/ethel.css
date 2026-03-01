@@ -69,6 +69,7 @@ section {
 #willoughby {
     background-size: cover;
 }
+#preachers{  background-position: bottom;}
 .container {
     border-image-slice: 17 17 17 17;
     border-image-width: 17px 17px 17px 17px;
