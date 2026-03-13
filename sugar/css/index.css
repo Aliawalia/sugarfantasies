@@ -19,10 +19,9 @@ html {
     font-style: normal;
 }
 
-*,
-*::before,
-*::after {
+*{
     box-sizing: border-box;
+    cursor: url(https://cur.cursors-4u.net/nature/nat-7/nat678.cur), auto !important;
 }
 
 body {
