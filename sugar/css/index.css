@@ -1,510 +1,334 @@
-html {
-    scrollbar-color: #d8ac7f #ffecce;
-}
-::selection {
-    color: #9d7455;
-    background: #ffead3;
-}
-
-@font-face {
-    font-family: "bar";
-    src: url("https://file.garden/Zj1sfPoh-G9Y8BHe/Barlaxent.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Goo";
-    src: url("https://file.garden/Zj1sfPoh-G9Y8BHe/Goozette.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-
-*{
-    box-sizing: border-box;
-    cursor: url(https://cur.cursors-4u.net/nature/nat-7/nat678.cur), auto !important;
-}
-
-body {
-    background: url(/index/bg.webp) center / cover fixed;
-    font-family: "bar";
-    margin: 0;
-}
-
-/* â”€â”€ Layout â”€â”€ */
-.outer {
-    max-width: 990px;
-    height: 1200px;
-    margin: 20px auto 50px;
-    padding: 3.5px;
-    background: white;
-    border: 7px solid;
-    border-image: url("/index/border1.webp") 7 round;
-    border-image-outset: 4px;
-}
-
-.container {
-    background: url(/index/bg2.webp);
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border: 1px dashed #a97144;
-    position: relative;
-}
-
-/* â”€â”€ Header â”€â”€ */
-header {
-    background: url(/index/banner.webp) center / cover;
-    width: 100%;
-    height: 250px;
-    border: 5px solid white;
-    outline: 1px dotted;
-    position: relative;
-    z-index: 9;
-}
-
-header h1 {
-    font-family: "Goo";
-    font-style: italic;
-    position: absolute;
-    bottom: -20px;
-    left: 15px;
-    font-size: 3.6em;
-    margin: 0;
-    transition: filter 0.1s;
-    z-index: 9;
-}
-
-h1:hover {
-    filter: drop-shadow(2px 2px white) drop-shadow(-2px -2px white) drop-shadow(-2px 2px white)
-        drop-shadow(2px -2px white) drop-shadow(1px 1px 1px #579122);
-}
-
-header span {
-    text-shadow: 2px 1px #664712;
-}
-
-/* Letter colors */
-.red {
-    color: #ffb3b3;
-}
-.orng {
-    color: #ffc9b3;
-}
-.yllw {
-    color: #fff5b3;
-}
-.grn {
-    color: #dbffb3;
-}
-.bl {
-    color: #b3fffb;
-}
-.prp {
-    color: #f2b3ff;
-}
-
-.cd {
-    position: absolute;
-    top: -5px;
-    right: -7em;
-    height: 24%;
-    z-index: 1;
-    animation: spin 10s linear infinite;
-    will-change: transform;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.thing {
-    width: 100%;
-    border: 1px solid #b38982;
-    margin: 5px 0;
-    padding: 5px;
-    background: linear-gradient(180deg, #fff6f0, #ffe3ce);
-}
-
-p {
-    margin: 0;
-}
-.stamps,
-.trackWrapper {
-    height: 70px;
-    width: 935px;
-
-    padding: 5px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.innermarq,
-#trackLink {
-    height: 100%;
-    animation: 18s horzmarquee infinite linear;
-    display: inline-block;
-}
-.innermarq img {
-    height: 100%;
-}
-
-@keyframes horzmarquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.content {
-    display: flex;
-    gap: 5px;
-    width: 100%;
-    height: 70.5%;
-}
-
-.left,
-.right {
-    width: 25%;
-    padding: 5px;
-    background-color: #fff7ea;
-    border: 1px dashed #a97144;
-    color: #878787;
-}
-
-.center {
-    width: 49%;
-}
-
-h2 {
-    margin: 0;
-    font-family: "Goo";
-    font-style: italic;
-    color: #fffbf7;
-    text-shadow: 2px 1px #592c09;
-}
-
-.title {
-    font-size: 1.4em;
-    background: url(/index/title.webp) center / cover;
-    padding: 5px 7px 0 2px;
-}
-
-#sec {
-    background-image: url(/index/title2.webp);
-}
-
-nav {
-    text-align: end;
-    border: 1px dashed;
-}
-
-a {
-    display: block;
-    text-decoration: none;
-}
-
-nav a {
-    padding: 5px;
-    background: linear-gradient(#f9ffc0 50%, #e8f9b3);
-    border-top: 1px solid #764d00;
-    color: #684b2d;
-}
-
-nav a:hover {
-    background: #d9e4b6;
-    font-style: italic;
-}
-
-.off {
-    background: linear-gradient(#ffedc0 50%, #f9ddb3);
-}
-.off:hover {
-    background: #e9cda4;
-}
-
-.fanlistings {
-    background: white;
-    width: 100%;
-    height: 28%;
-    border: 7px solid;
-    border-image: url(/index/border1.webp) 7 fill round;
-    border-image-outset: 3px;
-    outline: 1px dashed #dc9a5e;
-    outline-offset: -6px;
-    padding: 5px;
-    overflow: auto;
-    margin: 15px auto 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.fanlistings a img {
-    display: block;
-    width: 100%;
-}
-
-#lastfm {
-    width: 100%;
-    padding: 5px;
-    overflow: hidden;
-    text-align: center;
-    background: linear-gradient(#d2e29f 50%, #9fb880);
-    margin-top: 15px;
-    height: 28%;
-    border: 1px dashed;
-    color: #405e32;
-}
-
-#statusText {
-    margin-bottom: 5px;
-}
-
-#albumArt {
-    margin: 0 auto;
-    width: 70%;
-}
-
-#trackWrapper {
-    width: 140px;
-    overflow: hidden;
-    display: none;
-    margin: 5px auto;
-}
-
-#trackLink {
-    animation: 4s horzmarquee infinite linear;
-    color: #3a6914;
-    text-decoration: none;
-    white-space: nowrap;
-    padding-left: 100%;
-}
-.buttons2 {
-    border: double #fff3af;
-    height: 38px;
-    background: #546e32;
-    overflow: auto;
-    width: 100%;
-    display: flex;
-}
-
-.buttons2 img {
-    width: 88px;
-    height: 31px;
-    margin: 0 auto;
-    display: block;
-}
-
-.link {
-    margin: 10px auto;
-    padding: 2px;
-    box-shadow: -2px 2px 0 #b98155;
-    background-color: #ffe597;
-    font-style: italic;
-    color: #59370a;
-    width: 95%;
-}
-
-.me {
-    border: 1px solid #986e49;
-    height: 10%;
-    width: 95%;
-    padding: 5px;
-    background: #ffd4bd;
-    display: flex;
-    margin: 10px auto;
-    color: #59370a;
-}
-
-.stack {
-    display: flex;
-    width: 88px;
-    flex-direction: column;
-    gap: 5px;
-    margin-right: 5px;
-}
-
-.chatbox {
-    background-color: #8e7352;
-    width: 100%;
-    height: 45%;
-    display: inline-block;
-    border: 3px double black;
-}
-
-.lyrics {
-    background: url(/index/ethel.jpg) center / cover;
-    font-style: italic;
-    font-family: times, serif;
-    margin-top: 5px;
-    padding: 5px;
-    height: 32%;
-    position: relative;
-}
-
-.lyrics p {
-    position: absolute;
-    bottom: 2px;
-    margin: 0;
-    color: #453a2e;
-    transition: color 0.5s;
-}
-
-.lyrics p:hover {
-    color: #f6d89b;
-}
-
-main {
-    background: url(/index/main.webp) center / cover;
-    box-shadow: inset 0 0 0 1000px rgba(255, 207, 141, 0.28);
-    color: #fff1d9;
-    width: 95%;
-    height: 30%;
-    outline: dashed 1px #954a1b;
-    border: 5px solid white;
-    overflow: auto;
-    margin: 5px auto;
-}
-
-main p {
-    margin: 5px;
-}
-
-.a {
-    width: 95%;
-    margin: 8px auto 0;
-    display: block;
-}
-
-.aboutme,
-.abouts {
-    border: 1px dashed #a97144;
-    padding: 15px;
-    margin: 10px auto;
-    width: 95%;
-}
-
-.aboutme {
-    background: #e1d4a7;
-}
-.abouts {
-    background: #e1bea7;
-    margin-top: 20px;
-}
-
-hr {
-    margin: 0;
-    border: 0;
-    border-bottom: 1px dashed #a97144;
-}
-
-span {
-    margin: 2px;
-    color: #59432a;
-}
-
-.text {
-    padding: 5px;
-    background-color: rgba(255, 244, 226, 0.5);
-    margin-top: 5px;
-    color: #47300d;
-}
-
-.aboutme i {
-    color: #325e18;
-    display: block;
-    text-align: center;
-    margin-top: 5px;
-}
-
-            @media (max-width:1280px){
-                .cd{
-                    display: none;
-                }
+        html {
+                scrollbar-color: #b9d3d8 #c8e2e2;
             }
-            @media (max-width:990px){
-                .outer{
-                    height:1110px
-                }
-                .thing{
-                    display: none;
-                }
-                .content{
-                    margin-top:10px;
-                    height:75%;
-                }
+
+            ::selection {
+                color: #9d7455;
+                background: #ffead3;
             }
-            
-            @media (max-width:945px){
-                .container{ padding:0;}
-                .outer{
-                    height: fit-content
-                }
-                .content{
-                    flex-wrap: wrap;
-                }
-                .left , .right , .center{
-                    width:100%;
-                    height: fit-content;
-                    padding:0;
-                    background: 0;
-                    border:none;
-                }
-                .fanlistings, #lastfm, .a, .title, main img, .link, .me, .chatbox{
-                    display: none;
-                }
-                nav{
-                    display: flex;
-                    justify-content: center;
-                    background: 0;
-                    border:none;
-                }
-                nav a{
-                    width: fit-content;
-                    margin:5px;
-                border: 1px solid #764d00;
-                }
-                main{
-                    background-position: top;
-                }
-                main p{
-                    padding:10px;
-                }
-                .abouts{
-                      background: #e6b697;
-                }
-                .buttons2{
-                    width:95%;
-                    margin:auto;
-                }
-                .lyrics{
-                    height:500px;
-                    width:95%;
-                    margin: 5px auto;
-                }
+
+            * {
+                box-sizing: border-box;
             }
-            
-            @media (max-width:715px){
-                nav{
-                    width: 95%;
-                    overflow-x: auto;
-                    white-space:nowrap;
-                    display: block;
-                    padding:10px;
-                    margin:0 auto;
-                }
-                nav a{
-                    display: inline-block;
-                    margin:2px;
-                }
+
+            body {
+                background: url(/index/bg.webp);
+                font-family: "Elms Sans";
             }
-            
-            @media (max-width:590px){
-                header h1{
-                    display: none;
-                }
+
+            h1,
+            h2 {
+                margin: 0;
+                font-family: "Kapakana";
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .container {
+                display: flex;
+                margin: 5px auto;
+                width: 900px;
+                height: 890px;
+                margin-bottom: 70px;
+            }
+
+            .left {
+                width: 31%;
+                padding: 5px;
+                border-right: 1px solid rgba(150, 84, 62, 0.55);
+                position: relative;
+            }
+
+            .left div {
+                float: right;
+            }
+
+            .right {
+                width: 69%;
+                padding: 5px;
+                position: relative;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            nav h1 {
+                text-align: right;
+                position: relative;
+                margin-top: 30px;
+                font-size: 3em;
+                color: #564537;
+                filter: drop-shadow(1px 1px white) drop-shadow(-1px -1px white) drop-shadow(-1px 1px white)
+                    drop-shadow(1px -1px white);
+                z-index: 9;
+            }
+
+            .absolute {
+                position: absolute;
+                top: 32px;
+                display: block;
+                width: 100%;
+                border: 1px dashed #826857;
+            }
+
+            nav a {
+                display: block;
+                text-align: right;
+                color: #2e354c;
+                font-size: 17px;
+            }
+
+            nav a:hover {
+                font-style: italic;
+                background: linear-gradient(to left, rgb(217 238 245) 0%, rgba(251, 237, 239, 0) 100%);
+            }
+
+            .off:hover {
+                font-style: italic;
+                background: linear-gradient(to left, rgb(245, 234, 217) 0%, rgba(251, 237, 239, 0) 100%);
+            }
+
+            #calendar {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: rgba(212, 234, 203, 0.67);
+                border-radius: 15px;
+                width: 80%;
+                justify-content: center;
+                margin-top: 5px;
+                padding: 4px;
+                margin-bottom: 5px;
+            }
+
+            #calendar h1 {
+                margin: 0px;
+                text-align: center;
+                font-size: 17px;
+                color: #161d24;
+            }
+
+            table {
+                width: 100%;
+                border-right: none;
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+
+            td {
+                width: 100%;
+                box-sizing: border-box;
+                border: 1px dotted #5d95a8;
+                padding: 4px;
+                text-align: center;
+                transition: 0.15s;
+                font-size: 13px;
+            }
+
+            td:hover,
+            td:last-child:hover {
+                cursor: default;
+                background-color: #96d0c9;
+                transition: 0.15s;
+            }
+
+            td.is-disabled {
+                color: #677397;
+            }
+
+            td.today {
+                background-color: #eefcff;
+                color: var(--white);
+            }
+
+            tr:first-child td {
+                color: #ffffff;
+                background-color: #87b7a0;
+            }
+
+            .fanlistings {
+                width: 80%;
+                height: 11.9%;
+                padding: 5px;
+                overflow: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .fanlistings a img {
+                display: block;
+                width: 100%;
+            }
+
+            .buttons2 {
+                width: 95px;
+                overflow: auto;
+                height: 34.1%;
+                background-color: rgba(171, 255, 254, 0.45);
+                margin-top: 3px;
+            }
+
+            .buttons2 img {
+                width: 88px;
+                height: 31px;
+                margin: 0 auto;
+                display: block;
+                margin-top: 2px;
+            }
+
+            .sakura {
+                position: absolute;
+                height: 42%;
+                bottom: -1.4em;
+                left: -3.5em;
+                z-index: 1;
+            }
+
+            .sakura:hover {
+                z-index: -1;
+                transition: 0.5s;
+            }
+
+            .left:has(.buttons2:hover) .sakura,
+            .left:has(.fanlistings:hover) .sakura {
+                z-index: -1;
+                transition: 0.5s;
+            }
+
+            header {
+                background: url(/index/header.webp);
+                width: 100%;
+                height: 25%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+            }
+
+            header h1 {
+                position: absolute;
+                font-size: 4em;
+                bottom: -26px;
+                color: #c2a994;
+                filter: drop-shadow(1px 1px #564537) drop-shadow(-1px -1px #564537) drop-shadow(-1px 1px #564537)
+                    drop-shadow(1px -1px #564537);
+                z-index: 2;
+            }
+
+            .content {
+                width: 100%;
+                height: 75.5%;
+                margin-top: 2px;
+                display: flex;
+                position: relative;
+                gap: 3px;
+            }
+
+            .lside {
+                height: 100%;
+                width: 80%;
+            }
+
+            .rside {
+                height: 100%;
+                width: 120px;
+                padding: 0.5em 0.5em 4em 0.5em;
+                border-radius: 0 0 100px 100px;
+                background: #9ce2de;
+                overflow: auto;
+            }
+
+            .aboutme,
+            main {
+                border: 1px dashed #fdfffb;
+                padding: 10px;
+                margin: 10px auto;
+                width: 98%;
+            }
+
+            main {
+                background-color: #d0c998;
+            }
+
+            .aboutme {
+                background-color: #b6d098;
+                position: relative;
+            }
+
+            .text {
+                padding: 5px;
+                background-color: rgba(255, 244, 226, 0.5);
+                color: #47300d;
+            }
+
+            .aboutme h1 {
+                position: absolute;
+                font-size: 2.5em;
+                bottom: -20px;
+                color: #94b8c2;
+                filter: drop-shadow(1px 1px #fcffd2) drop-shadow(-1px -1px #fcffd2) drop-shadow(-1px 1px #fcffd2)
+                    drop-shadow(1px -1px #fcffd2);
+                z-index: 2;
+            }
+
+            .divider {
+                width: 98%;
+                margin: auto;
+                display: block;
+            }
+
+            .recs {
+                width: 98%;
+                height: 32%;
+                display: flex;
+                margin: 10px auto;
+                gap: 5px;
+            }
+
+            main img {
+                margin-top: 10px;
+            }
+
+            main a {
+                text-decoration: none;
+            }
+
+            .website,
+            .song {
+                width: 50%;
+                background-color: #e7dbc2;
+                padding: 10px 10px 0px 10px;
+                position: relative;
+            }
+
+            .card {
+                width: 100%;
+                height: 90%;
+            }
+
+            .website h2,
+            .song h2 {
+                color: #242d43;
+                position: absolute;
+                bottom: -12px;
+                font-size: 2em;
+                left: 0;
+                text-shadow: 2px 1px #ffffff;
+            }
+
+            .rside img {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .chatbox {
+                background-color: #8e7352;
+                width: 200px;
+                height: 45%;
+                display: inline-block;
+                border: 3px double black;
+                position: absolute;
+                bottom: 4em;
+                right: -12.54em;
             }
