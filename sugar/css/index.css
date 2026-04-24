@@ -79,6 +79,7 @@
                 text-align: right;
                 color: #2e354c;
                 font-size: 17px;
+                      background: linear-gradient(90deg,rgba(176, 213, 242, 0) 0%, rgb(176, 213, 242) 60%);
             }
 
             nav a:hover {
