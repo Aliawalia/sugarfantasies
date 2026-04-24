@@ -1,8 +1,9 @@
 
 body {
-    background: url(https://sugarfantasies.neocities.org/index/cbox.webp);
+    background: url(https://sugarfantasies.neocities.org/index/chatbox.jpg);
     font-family: Times;
     background-size:cover;
+    background-position:center;
 }
 
 .allMessages {
@@ -34,8 +35,8 @@ body {
 }
 .sent {
     float: right;
-    border-radius: 5px;  background-color: #6E5C4F;
-  color: #fff8f0;
+    border-radius: 5px;  background-color: #B2C2B8;
+  color: #424D44;
     box-shadow: -1px 1px 3px #c4b5b5;
     animation-direction: alternate-reverse;
 }
@@ -52,7 +53,7 @@ body {
 .recieved {
     float: left;
     border-radius: 8px;  
-    background-color: #6f2a2a;
+    background-color: #A38C77;
   color: #fff8f0;
     box-shadow: -1px 1px 3px white;
 }
