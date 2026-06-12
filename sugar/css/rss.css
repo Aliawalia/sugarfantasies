@@ -2,7 +2,6 @@
 .feed-container{font-size:14px; font-family:'Elms Sans';}
 .feed-container .header{display:none;}
 .feed-container .footer{display:none}
-.feed-container .content{margin:0px;padding:0 3px;}
 .feed-container .content .item{margin:0 0 7px 0;padding:0 0 7px 0;}
 .feed-container .content .item .title{margin:1px 0 1px 3px;padding:2px 2px 1px 3px;color:#dd6592;background:#dbffdf; font-weight:bold}
 .feed-container .content .item .title a:link{color:#dd6592;text-decoration:none;}
