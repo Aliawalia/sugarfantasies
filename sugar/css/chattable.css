@@ -1,9 +1,11 @@
-
+@font-face {
+                font-family: Willow;
+                src: url(https://file.garden/Zj1sfPoh-G9Y8BHe/willow.ttf);
+            }
 body {
-    background: url(https://sugarfantasies.neocities.org/index/chatbox.jpg);
-    font-family: Times;
-    background-size:cover;
-    background-position:center;
+    background: url(https://sugarfantasies.neocities.org/index/chattable.webp);
+
+                font-family:"Willow", "Elms Sans";}
 }
 
 .allMessages {
@@ -26,6 +28,7 @@ body {
     word-break: break-word;
     width: 100%;
     align-items: center;
+    margin-bottom:10px;
 }
 .msgWrapper:has(.received) {
     justify-content: flex-start;
@@ -34,29 +37,19 @@ body {
     justify-content: flex-end;
 }
 .sent {
-    float: right;
-    border-radius: 5px;  background-color: #B2C2B8;
-  color: #424D44;
-    box-shadow: -1px 1px 3px #c4b5b5;
-    animation-direction: alternate-reverse;
-}
-.sent::before {
-    content: " ";
-    background-color: inherit;
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    right: 2px;
-    top: 3px;
-    transform: rotateZ(-30deg) scale(1.5, 0.5) rotateZ(45deg);
-}
-.recieved {
-    float: left;
-    border-radius: 8px;  
-    background-color: #A38C77;
-  color: #fff8f0;
-    box-shadow: -1px 1px 3px white;
-}
+  animation-direction: alternate-reverse;
+  background: #ffe0ef;
+  border: 1px solid #ffbade;
+  border-radius: 10px 0px 10px 10px;
+  padding: 6px 12px;
+  box-shadow: inset 1px 2px 0px rgba(255, 255, 255, 0.7), inset -1px -2px 2px rgba(215, 127, 171, 0.1), 0 2px 4px rgba(215, 127, 171, 0.05);}
+
+.recieved {  animation-direction: alternate-reverse;
+  background: #fffae0;
+  border: 1px solid #ffe7ba;
+  border-radius: 0px 10px 10px 10px;
+  padding: 6px 12px;
+  box-shadow: inset 1px 2px 0px rgba(255, 255, 255, 0.7), inset -1px -2px 2px rgba(215, 181, 127, 0.1), 0 2px 4px rgba(215, 185, 127, 0.05);}
 .sent + #timestamp {
     text-align: right !important;
 }
@@ -129,15 +122,4 @@ body {
 
 #emojiTray img {
     height: 20pt;
-}
-#emojiTray img:hover {
-    height: 22pt;
-}
-#save {
-    background-color: #5d3;
-    color: #fff;
-    font-size: 12pt;
-    padding: 10px;
-    border: none;
-    border-radius: 1.25em;
 }
