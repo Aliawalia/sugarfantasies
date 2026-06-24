@@ -1,335 +1,620 @@
-        html {
-                scrollbar-color: #b9d3d8 #c8e2e2;
-            }
+html {
+    scrollbar-color: #ffd4d8 #ffe8f2;
+}
 
-            ::selection {
-                color: #9d7455;
-                background: #ffead3;
-            }
+::selection {
+    color: #9e6e4d;
+    background: #ffd3e1;
+}
 
-            * {
-                box-sizing: border-box;
-            }
+@font-face {
+    font-family: Willow;
+    src: url(https://file.garden/Zj1sfPoh-G9Y8BHe/willow.ttf);
+}
 
-            body {
-                background: url(/index/bg.webp);
-                font-family: "Elms Sans";
-            }
+* {
+    box-sizing: border-box;
+}
 
-            h1,
-            h2 {
-                margin: 0;
-                font-family: "Kapakana";
-            }
+:root {
+    --border: #8c5e3b;
+}
 
-            p {
-                margin: 0;
-            }
+body {
+    background: url(/index/bg.webp);
+    font-family: "Willow", "Elms Sans", "Nunito";
+}
 
-            .container {
-                display: flex;
-                margin: 5px auto;
-                width: 900px;
-                height: 890px;
-                margin-bottom: 70px;
-            }
+/* ─── Outer Wrapper & Container ─── */
+.outerwrap {
+    width: 999px;
+    height: 1100px;
+    border-width: 5px;
+    border-style: solid;
+    border-image: url(/index/border.webp) 7 fill round;
+    margin: 50px auto;
+    padding: 5px;
+}
 
-            .left {
-                width: 31%;
-                padding: 5px;
-                border-right: 1px solid rgba(150, 84, 62, 0.55);
-                position: relative;
-            }
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff8e7;
+    outline: 1px dotted black;
+    outline-offset: 3px;
+    padding: 5px;
+}
 
-            .left div {
-                float: right;
-            }
+/* ─── Header ─── */
+header {
+    width: 100%;
+    height: 25%;
+    background: url(/index/header.webp) center / cover;
+    position: relative;
+    border: 1px solid var(--border);
+}
 
-            .right {
-                width: 69%;
-                padding: 5px;
-                position: relative;
-            }
+header h1 {
+    position: absolute;
+    bottom: -35px;
+    left: -10px;
+    margin: 0;
+    font-family: Kapakana;
+    font-size: 5em;
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        rgb(255, 189, 80) 5%,
+        rgba(255, 164, 193, 1) 18%,
+        rgba(207, 163, 255, 1) 40%,
+        rgba(147, 191, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    filter: drop-shadow(-1px -1px white) drop-shadow(-1px 1px white) drop-shadow(1px -1px white)
+        drop-shadow(2px 2px 1px white) drop-shadow(-1px -1px #f0c1a7) drop-shadow(-1px 1px #f0c1a7)
+        drop-shadow(1px -1px #f0c1a7) drop-shadow(1px 1px 0px #f0c1a7);
+}
 
-            nav {
-                position: relative;
-            }
+.title {
+    width: 100%;
+    padding: 8px 2px 4px 6px;
+    font-style: italic;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    display: flex;
+    font-size: 1.1em;
+}
 
-            nav h1 {
-                text-align: right;
-                position: relative;
-                margin-top: 30px;
-                font-size: 3em;
-                color: #564537;
-                filter: drop-shadow(1px 1px white) drop-shadow(-1px -1px white) drop-shadow(-1px 1px white)
-                    drop-shadow(1px -1px white);
-                z-index: 9;
-            }
+.x {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-style: normal;
+    font-family: "Elms Sans";
+    font-size: 9px;
+    width: 20px;
+    height: 20px;
+    background-color: #c52f2f;
+    padding: 5px;
+    text-align: center;
+}
 
-            .absolute {
-                position: absolute;
-                top: 32px;
-                display: block;
-                width: 100%;
-                border: 1px dashed #826857;
-            }
+.x:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid #9f2626;
+}
+.pfp {
+    position: absolute;
+    right: 7px;
+    top: 40px;
+    height: 80%;
+    width: 22%;
+    background: url(/index/pfp.webp) center / contain;
+    border-radius: 100%;
+    border: 4px solid white;
+    box-shadow:
+        0px 0px 4px inset #989898,
+        0px 0px 4px white;
+}
 
-            nav a {
-                display: block;
-                text-align: right;
-                color: #2e354c;
-                font-size: 17px;
-                      background: linear-gradient(90deg,rgba(176, 213, 242, 0) 0%, rgb(176, 213, 242) 60%);
-            }
+.pfp::after {
+    content: "alia / jolly / highschool";
+    position: absolute;
+    top: 215px;
+    right: 0;
+    width: 90%;
+    color: #705130;
+    text-align: center;
+    padding: 5px;
+    background: linear-gradient(to bottom, #ffffff 0%, #fff7dd 35%, #ffe0ba 100%);
+    border: 1px dashed #63361a;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
 
-            nav a:hover {
-                font-style: italic;
-                background: linear-gradient(to left, rgb(217 238 245) 0%, rgba(251, 237, 239, 0) 100%);
-            }
+.pfp:hover::after {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
 
-            .off:hover {
-                font-style: italic;
-                background: linear-gradient(to left, rgb(245, 234, 217) 0%, rgba(251, 237, 239, 0) 100%);
-            }
+.innerc {
+    width: 100%;
+    height: 75.3%;
+    padding: 5px;
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+}
 
-            #calendar {
-                display: flex;
-                flex-wrap: wrap;
-                background-color: rgba(212, 234, 203, 0.67);
-                border-radius: 15px;
-                width: 80%;
-                justify-content: center;
-                margin-top: 5px;
-                padding: 4px;
-                margin-bottom: 5px;
-            }
+.left {
+    width: 25%;
+    height: 100%;
+}
 
-            #calendar h1 {
-                margin: 0px;
-                text-align: center;
-                font-size: 17px;
-                color: #161d24;
-            }
+.center {
+    width: 74.5%;
+    height: 100%;
+    padding: 5px;
+    background: url(/index/mainbg.webp);
+    border: 3px solid white;
+    outline: 1px solid #d1b9b3;
+    border-radius: 5px;
+}
 
-            table {
-                width: 100%;
-                border-right: none;
-                border-spacing: 0;
-                border-collapse: collapse;
-            }
+.right {
+    width: 100%;
+    height: 32%;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
 
-            td {
-                width: 100%;
-                box-sizing: border-box;
-                border: 1px dotted #5d95a8;
-                padding: 4px;
-                text-align: center;
-                transition: 0.15s;
-                font-size: 13px;
-            }
+#lastfm {
+    width: 100%;
+    height: 85px;
+    background-color: white;
+    border: 1px dashed #a76700;
+    outline: 2px solid white;
+    overflow: auto;
+    word-break: break-word;
+}
 
-            td:hover,
-            td:last-child:hover {
-                cursor: default;
-                background-color: #96d0c9;
-                transition: 0.15s;
-            }
+#lastfm a {
+    font-size: 12px;
+    color: #3a1f10;
+}
 
-            td.is-disabled {
-                color: #677397;
-            }
+#lastfmwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-            td.today {
-                background-color: #eefcff;
-                color: var(--white);
-            }
+#lastfmimgbox {
+    width: 80px;
+    height: 100%;
+    padding: 5px;
+}
 
-            tr:first-child td {
-                color: #ffffff;
-                background-color: #87b7a0;
-            }
+#trackart {
+    height: 65px;
+    width: 65px;
+    margin-top: 4px;
+}
 
-            .fanlistings {
-                width: 80%;
-                height: 11.9%;
-                padding: 5px;
-                overflow: auto;
-                display: flex;
-                flex-wrap: wrap;
-            }
+.trackInfo {
+    width: 110px;
+    height: 100%;
+    justify-content: center;
+}
 
-            .fanlistings a img {
-                display: block;
-                width: 100%;
-            }
+.trackInfo p {
+    border-bottom: 1px dashed #ffb0c9;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
 
-            .buttons2 {
-                width: 95px;
-                overflow: auto;
-                height: 34.1%;
-                background-color: rgba(171, 255, 254, 0.45);
-                margin-top: 3px;
-            }
+nav {
+    width: 100%;
+    padding: 2px;
+    margin-top: 10px;
+    position: relative;
+    background: linear-gradient(to top, rgb(155, 255, 251), rgb(232, 255, 169));
+    border: 1px solid #8ee3bc;
+}
 
-            .buttons2 img {
-                width: 88px;
-                height: 31px;
-                margin: 0 auto;
-                display: block;
-                margin-top: 2px;
-            }
+nav a {
+    display: block;
+    margin: 3px;
+    padding: 6px 3px 3px;
+    color: #6c4326;
+    border: 1px solid #cdb8ab;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffeed6 50%, #ffffff 100%);
+}
 
-            .sakura {
-                position: absolute;
-                height: 42%;
-                bottom: -1.4em;
-                left: -3.5em;
-                z-index: 1;
-            }
+nav a:hover {
+    width: 95%;
+    font-style: italic;
+}
 
-            .sakura:hover {
-                z-index: -1;
-                transition: 0.5s;
-            }
+nav a:nth-child(even):hover {
+    background: #ffe4e4;
+}
 
-            .left:has(.buttons2:hover) .sakura,
-            .left:has(.fanlistings:hover) .sakura {
-                z-index: -1;
-                transition: 0.5s;
-            }
+nav a:nth-child(odd):hover {
+    background: #ffddbe;
+}
 
-            header {
-                background: url(/index/header.webp);
-                width: 100%;
-                height: 25%;
-                background-size: cover;
-                background-position: center;
-                position: relative;
-            }
+.fanlistings {
+    width: 100%;
+    height: 16.2%;
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    overflow: auto;
+    background: #ffffff;
+    border: 1px dashed #a76700;
+    outline: 2px solid white;
+}
 
-            header h1 {
-                position: absolute;
-                font-size: 4em;
-                bottom: -26px;
-                color: #c2a994;
-                filter: drop-shadow(1px 1px #564537) drop-shadow(-1px -1px #564537) drop-shadow(-1px 1px #564537)
-                    drop-shadow(1px -1px #564537);
-                z-index: 2;
-            }
+.music {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #49001e;
+    background: rgb(255, 179, 192);
+    border: 1px solid #fa689a;
+}
 
-            .content {
-                width: 100%;
-                height: 75.5%;
-                margin-top: 2px;
-                display: flex;
-                position: relative;
-                gap: 3px;
-            }
+.play {
+    font-size: 15px;
+    cursor: pointer;
+}
 
-            .lside {
-                height: 100%;
-                width: 80%;
-            }
+.playing {
+    font-style: italic;
+}
 
-            .rside {
-                height: 100%;
-                width: 120px;
-                padding: 0.5em 0.5em 4em 0.5em;
-                border-radius: 0 0 100px 100px;
-                background: #9ce2de;
-                overflow: auto;
-            }
+.feed {
+    height: 203px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgb(255, 255, 219));
+    border: 1px solid #cdb8ab;
+}
 
-            .aboutme,
-            main {
-                border: 1px dashed #fdfffb;
-                padding: 10px;
-                margin: 10px auto;
-                width: 98%;
-            }
+.marqueebox {
+    width: 100%;
+    height: 8%;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
+    background: linear-gradient(180deg, #ffffff, #d9f9ff);
+    border: 1px solid #87cdff;
+}
 
-            main {
-                background-color: #d0c998;
-            }
+.marqueebox img {
+    height: 100%;
+}
 
-            .aboutme {
-                background-color: #b6d098;
-                position: relative;
-            }
+.marquee {
+    display: inline-block;
+    height: 100%;
+    animation: marquee 40s linear infinite;
+}
 
-            .text {
-                padding: 5px;
-                background-color: rgba(255, 244, 226, 0.5);
-                color: #47300d;
-            }
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.cinnerc {
+    width: 100%;
+    height: 62%;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    background: url(/index/cinner.webp);
+    border: 1px solid #c8dc97;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px inset #c5c5c5;
+}
 
-            .aboutme h1 {
-                position: absolute;
-                font-size: 2.5em;
-                bottom: -20px;
-                color: #94b8c2;
-                filter: drop-shadow(1px 1px #fcffd2) drop-shadow(-1px -1px #fcffd2) drop-shadow(-1px 1px #fcffd2)
-                    drop-shadow(1px -1px #fcffd2);
-                z-index: 2;
-            }
+.main {
+    position: relative;
+    width: 74%;
+    padding: 5px;
+    display: flex;
+    background-color: rgba(255, 251, 228, 0.69);
+    border: 1px solid #dcd297;
+}
 
-            .divider {
-                width: 98%;
-                margin: auto;
-                display: block;
-            }
+.images {
+    width: 25%;
+    padding: 5px;
+    overflow: auto;
+    background: linear-gradient(to top, rgb(252, 255, 221), rgb(255, 200, 200));
+    border: 1px solid #dfc5ac;
+}
 
-            .recs {
-                width: 98%;
-                height: 32%;
-                display: flex;
-                margin: 10px auto;
-                gap: 5px;
-            }
+.images img {
+    width: 100%;
+}
 
-            main img {
-                margin-top: 10px;
-            }
+.blud {
+    width: 85%;
+    padding: 5px;
+    background: url(/index/bludbg.webp);
+    border: 1px solid #ffa2a2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px inset #ffffff;
+}
 
-            main a {
-                text-decoration: none;
-            }
+main {
+    position: relative;
+    width: 100%;
+    height: 55%;
+    color: #52311a;
+    background-color: #fffdf5;
+    border: 1px solid #cea883;
+    border-radius: 5px;
+}
 
-            .website,
-            .song {
-                width: 50%;
-                background-color: #e7dbc2;
-                padding: 10px 10px 0px 10px;
-                position: relative;
-            }
+main p {
+    margin: 5px;
+}
 
-            .card {
-                width: 100%;
-                height: 90%;
-            }
+main .title {
+    border-radius: 5px 5px 0 0;
+    color: black;
+}
 
-            .website h2,
-            .song h2 {
-                color: #242d43;
-                position: absolute;
-                bottom: -12px;
-                font-size: 2em;
-                left: 0;
-                text-shadow: 2px 1px #ffffff;
-            }
+.yotsuba {
+    float: right;
+    width: 20%;
+}
 
-            .rside img {
-                width: 100%;
-                margin-bottom: 5px;
-            }
+.lace {
+    position: absolute;
+    top: 13.12em;
+    right: -12em;
+    width: 91.45%;
+    height: 10%;
+    transform: rotate(90deg);
+    filter: drop-shadow(1px 1px white) drop-shadow(-1px -1px white) drop-shadow(-1px 1px white)
+        drop-shadow(1px -1px white);
+}
 
-            .chatbox {
-                background-color: #8e7352;
-                width: 200px;
-                height: 45%;
-                display: inline-block;
-                border: 3px double black;
-                position: absolute;
-                bottom: 4em;
-                right: -12.54em;
-            }
+.lace2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+}
+.content {
+    width: 100%;
+    height: 43%;
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.currently {
+    position: relative;
+    width: 49%;
+    padding: 5px;
+    background: url(/index/currentlybg.webp);
+    border: 1px solid #eeba78;
+    border-radius: 5px;
+}
+
+.me {
+    width: 49%;
+    padding: 5px;
+    overflow: auto;
+    flex-direction: row;
+    background-color: rgb(255, 246, 237);
+    border-style: solid;
+    border-width: 4px;
+    border-image: url("/index/border3.webp") 5 fill round;
+}
+
+.doing {
+    position: relative;
+    margin-top: 5px;
+    padding: 4px 3px 3px;
+    font-size: 15px;
+    color: #582121;
+    gap: 25px;
+    background: #f2ffe0;
+    border: 1px solid #dbe675;
+    border-radius: 8px;
+    box-shadow:
+        inset 1px 2px 0px rgb(255, 255, 255),
+        inset -1px -2px 1px rgb(220, 238, 212);
+}
+
+.doing img {
+    position: absolute;
+    top: 9px;
+    left: 93px;
+}
+
+.doing::before {
+    content: url(/index/cloveri.webp);
+    margin-right: 5px;
+}
+
+.doing:nth-child(even) {
+    background: #e0fffe;
+    border: 1px solid #75e3e6;
+    box-shadow:
+        inset 1px 2px 0px rgb(255, 255, 255),
+        inset -1px -2px 1px rgb(212, 232, 238);
+}
+
+.first {
+    color: #426d20;
+    font-style: italic;
+}
+
+.clock {
+    margin-top: 5px;
+    padding: 8px 5px 2px;
+    text-align: center;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 41%, rgb(235, 255, 254) 56%);
+    border: 1px solid #beefff;
+    border-radius: 5px;
+}
+
+.thing {
+    border: 1px solid var(--border);
+    background: #fff2f2;
+}
+
+.link {
+    width: 100%;
+    height: 31px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.buttons {
+    width: 30%;
+    height: 100%;
+}
+
+.buttons2 {
+    width: 100%;
+    height: 54%;
+    margin-top: 10px;
+    padding: 8px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    border-width: 5px;
+    border-style: solid;
+    border-image: url(/index/border.webp) 7 fill round;
+    border-radius: 5px;
+}
+
+.buttons2 img {
+    width: 88px;
+    height: 31px;
+}
+
+.section2 {
+    width: 35%;
+}
+
+.cliques {
+    height: 35%;
+    padding: 5px;
+    overflow: auto;
+    font-size: 13px;
+    text-align: center;
+    border: 7px solid;
+    border-image: url(index/border2.webp) 7 fill round;
+}
+
+.cliques a {
+    color: #5a311b;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.section3 {
+    height: 61%;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.blinkies {
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+    background: url(./index/blinkies.webp);
+    border: 1px solid var(--border);
+}
+
+.blinkies .title {
+    position: sticky;
+    top: 0;
+}
+
+.blinkies img {
+    display: block;
+    width: 90%;
+    margin: 5px auto 0;
+    image-rendering: pixelated;
+}
+
+.pallas {
+    width: 38%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    border: 1px solid var(--border);
+}
+
+.pallas img {
+    width: 100%;
+}
+
+.chatbox {
+    width: 33%;
+}
+
+.text-webring {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    padding: 5px;
+    font-size: 13px;
+    color: #53002e;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(255, 227, 249), #ffbad4);
+    border: 1px solid #ff60ad;
+    border-radius: 5px;
+}
+
+.webring {
+    width: 100%;
+    margin-top: 5px !important;
+    margin-bottom: 9px !important;
+    font-size: 13px;
+    color: #53002e;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(255, 227, 249), #ffbad4);
+    border: 1px solid #ff60ad;
+    border-radius: 5px;
+}
+
+#green {
+    background-image: linear-gradient(to bottom, rgb(252, 255, 227), #f6ffbe);
+}
+#orange {
+    background-image: linear-gradient(to bottom, rgb(255, 243, 227), #ffdfbe);
+}
+#blue {
+    background-image: linear-gradient(to bottom, rgb(227, 255, 250), #beefff);
+}
+#yellow {
+    background-image: linear-gradient(to bottom, rgb(255, 254, 227), #fff7be);
+}
+
+
+.banner {
+    width: 100%;
+    margin-top: 5px;
+}
