@@ -1,0 +1,72 @@
+
+#templateWebring a {
+    color: #d86d90;
+}
+#templateWebring a:hover {
+    font-style: italic;
+}
+
+#templateWebring {
+    width: 100%;
+    margin-top: 5px !important;
+    margin-bottom: 9px !important;
+    font-size: 13px;
+    color: #53002e;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(255, 227, 249), #ffbad4);
+    border: 1px solid #ff60ad;
+    border-radius: 5px;
+}
+
+#webringiconbox {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    left: 8px;
+    margin-top: 8px;
+    box-sizing: content-box;
+    max-width: 100%;
+    border: 1px solid #ff60ad;
+    border-radius: 5px;
+}
+
+#iconWebring {
+    width: 100%;
+    height: 100%;
+}
+
+#webringdescbox {
+    width: 60%;
+    height: 80px;
+    margin-left: 67px;
+    margin-top: -50px;
+    padding: 0;
+    background: white;
+    border: 1px dashed #ff60ad;
+    outline: 2px solid white;
+    border-radius: 5px;
+}
+
+#webringdesc {
+    width: 90%;
+    margin: 5px auto 0;
+    color: #53002e;
+    font-size: 11px;
+}
+
+#webringlinks {
+    width: 94%;
+    height: auto;
+    margin: 8px auto;
+    background: white;
+    border: 1px dashed #ff60ad;
+    outline: 2px solid white;
+    border-radius: 4px;
+}
+
+#linkparaWebring {
+    margin: auto;
+    color: #53002e;
+    font-size: 12px;
+}
