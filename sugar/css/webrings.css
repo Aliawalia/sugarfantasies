@@ -13,7 +13,7 @@
 }
 
 .webring {
-    width: 100%;
+    width: 100% !important;
     margin-top: 5px !important;
     margin-bottom: 9px !important;
     font-size: 13px;
