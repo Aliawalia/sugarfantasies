@@ -573,6 +573,7 @@ main .title {
 
 .chatbox {
     width: 33%;
+    border: dashed 1px #b36d43;
 }
 
 #green {
