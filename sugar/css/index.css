@@ -523,7 +523,7 @@ main .title {
     font-size: 13px;
     text-align: center;
     border: 7px solid;
-    border-image: url(index/border2.webp) 7 fill round;
+    border-image: url(/index/border2.webp) 7 fill round;
 }
 
 .cliques a {
