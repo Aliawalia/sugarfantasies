@@ -575,31 +575,6 @@ main .title {
     width: 33%;
 }
 
-.text-webring {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 9px;
-    padding: 5px;
-    font-size: 13px;
-    color: #53002e;
-    text-align: center;
-    background: linear-gradient(to bottom, rgb(255, 227, 249), #ffbad4);
-    border: 1px solid #ff60ad;
-    border-radius: 5px;
-}
-
-.webring {
-    width: 100%;
-    margin-top: 5px !important;
-    margin-bottom: 9px !important;
-    font-size: 13px;
-    color: #53002e;
-    text-align: center;
-    background: linear-gradient(to bottom, rgb(255, 227, 249), #ffbad4);
-    border: 1px solid #ff60ad;
-    border-radius: 5px;
-}
-
 #green {
     background-image: linear-gradient(to bottom, rgb(252, 255, 227), #f6ffbe);
 }
