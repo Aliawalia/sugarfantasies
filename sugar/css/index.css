@@ -47,7 +47,7 @@
             }
             .container2{
 
-                background:url(index/bg.webp);
+                background:url(/index/bg.webp);
                 width:100%;
                 height:91%;
                 display: flex;
