@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-            @font-face {
-                font-family: Willow;
-                src: url(https://file.garden/Zj1sfPoh-G9Y8BHe/willow.ttf);
-            }
+@import url(https://fonts.bunny.net/css?family=aref-ruqaa:400|tangerine:400);
 .feed-container{font-size:14px; 
-                font-family:"Willow", "Elms Sans";}
+                font-family:"Aref Ruqaa"; }
 .feed-container .header{display:none;}
 .feed-container .footer{display:none}
 .feed-container .content .item{margin:0 0 7px 0;padding:0 0 7px 0;}
-.feed-container .content .item .title{margin:1px 0 1px 3px;padding:2px 2px 1px 3px;color:#dd6592;background:#dbffdf; font-weight:bold}
-.feed-container .content .item .title a:link{color:#dd6592;text-decoration:none;}
-.feed-container .content .item .title a:visited{color:#dd6592;text-decoration:none;}
-.feed-container .content .item .title a:hover{color:#dd6592;text-decoration:underline;}
-.feed-container .content .item .title a:active{color:#dd6592;text-decoration:none;}
-.feed-container .content .item .description{margin:5px 0px 0px 0px;padding:0 2px 0 3px;color:black;}
-.feed-container .content .item .description a{text-decoration:none;color:#000;}
-.feed-container .content .item .description a:hover{text-decoration:underline;color:black;}
-            .pubDt{
-                color:#ff3c85;
+.feed-container .content .item .title{margin:1px 0 1px 3px;padding:2px 2px 1px 3px;  background: #d0d299;font-weight:bold   font-family: Tangerine;}
+.feed-container .content .item .title a:link{color:#864532;text-decoration:none;}
+.feed-container .content .item .title a:visited{color:#864532;text-decoration:none;}
+.feed-container .content .item .title a:hover{color:#864532;text-decoration:underline;}
+.feed-container .content .item .title a:active{color:#864532;text-decoration:none;}
+.feed-container .content .item .description{margin:5px 0px 0px 0px;padding:0 2px 0 3px;color:633316;}
+.feed-container .content .item .description a{text-decoration:none;color:#633316;}
+.feed-container .content .item .description a:hover{text-decoration:underline;  color: #633316;}
+            .pubDt{  color: #b17b4b;
             }
