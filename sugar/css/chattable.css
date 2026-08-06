@@ -1,12 +1,11 @@
-@font-face {
-                font-family: Willow;
-                src: url(https://file.garden/Zj1sfPoh-G9Y8BHe/willow.ttf);
-            }
+@import url(https://fonts.bunny.net/css?family=aref-ruqaa:400|tangerine:400);
 body {
-    background: url(https://sugarfantasies.neocities.org/index/chattable.webp);
+    background:#fffaea;
 
-                font-family:"Willow", "Elms Sans";}
-}
+                font-family:"Aref ruqaa";}
+
+
+
 
 .allMessages {
     font-size: 15px;
