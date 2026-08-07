@@ -15,6 +15,7 @@
                 width:800px;
                 height:800px;
                 margin:50px auto;
+                margin-bottom: 150px;
             }
             header{
                 height:9%;
@@ -159,14 +160,12 @@
                 height:34%;
                 margin-top:5px;
                 display: inline-block;
-                img{
-                    width:100%;
-                    height:100%;
-                    opacity: 0;
-                    transition: .9s;
-                }
-                        }
-            .side1 img:hover{opacity:.5; transition: .9s;}
+                background:url(/index/med.webp);
+                background-size: 100% 100%;
+                opacity: 0;
+                transition:.9s
+            }
+            .side1:hover{opacity: 1; transition:.9s}
             .feed{
                 width:49%;
                             height:34%;
@@ -311,8 +310,16 @@
                 transition: .5s;
             }
             
-            .chatbox {
-                width: 100%;
-                border:0;
-                height:100%;
+            footer{
+                height: fit-content;
+                font-family: tangerine;
+                font-size:25px;
+                color:#60503b;
+                a{
+                    
+                color:#884d00;
+                }
+            }
+            footer a:hover{
+                font-weight: bold;
             }
