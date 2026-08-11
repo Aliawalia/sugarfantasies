@@ -1,0 +1,73 @@
+
+            
+@font-face {
+    font-family: "Avant";
+    src: url("https://file.garden/Zj1sfPoh-G9Y8BHe/Avant.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+            html {
+                scrollbar-color: #ffe7ad  transparent;
+            }
+            *{box-sizing: border-box;}
+            ::selection {
+                color: #fffef1;
+                background: rgba(208, 190, 159, 0.70);
+            }
+            body{
+                background:url(/site/bg.webp);
+                font-family:  Avant;
+                
+  letter-spacing: 0.05em;
+            }
+            .container{
+                width:625px;
+                height:500px;
+                margin:140px auto;
+                margin-bottom: 0px;
+                background-color: rgba(80, 15, 15, 0.8);
+                padding:1px;
+                
+                 color: #ffedd6;
+            }
+            h1{
+                Margin:10px;
+                  color: #5f403a;
+                text-shadow: 0.03em 0.03em 0 #69D86B,-0.03em -0.03em 0 #69D86B,0.03em -0.03em 0 #69D86B,-0.03em 0.03em 0 #69D86B,0 0.03em 0 #69D86B,0.03em 0 0 #69D86B,0 -0.03em 0 #69D86B,-0.03em 0 0 #169902,3px 3px 2px #000000;  text-transform: uppercase;
+            }
+            .header{
+                display: inline-block;
+            }
+            .side{
+                float: right;
+                height:45px;
+                margin:10px;
+            }
+            p{
+                margin:0px 0px 0px 15px;
+            }
+           .container a{
+                margin:0px 0px 0px 15px;
+                  color: #dfaba0;
+                text-transform: uppercase;
+                text-decoration: 1px underline dotted #90ce91;
+                font-style: italic;
+            }
+           .container a:hover{
+                color: #ffe2dc;
+                font-style: normal;
+            }
+            footer{
+                display: block;
+                margin:0px auto;
+                width:625px;
+            }
+            
+            footer a{
+                margin:0;
+                text-decoration: none;
+                color:#ffffff;
+            }
+            footer a:hover{
+                font-style: italic;
+            }
