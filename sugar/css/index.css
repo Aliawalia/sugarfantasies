@@ -1,6 +1,5 @@
 
-            html {
-                scrollbar-color: #ffe7ad #fffaea;     
+            html {  scrollbar-color: #ffe7ad transparent;  
             }
 
             ::selection {
