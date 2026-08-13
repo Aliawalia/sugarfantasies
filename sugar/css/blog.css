@@ -14,7 +14,7 @@
                 
             }
             .container{
-                width:850px;
+                width:1000px;
                 margin:0 auto;
                 margin-top:50px;
                 background:url(/blog/thering.webp);
@@ -25,7 +25,7 @@
                 gap:10px;
             }
             .left{
-                width:25%;
+                width:20%;
                 height:100%;
             }
             .side{
@@ -104,7 +104,7 @@
             }
 
             .right{
-                width:74%;
+                width:79%;
             }
             
             .entry {
