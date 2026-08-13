@@ -3,46 +3,54 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>SugarFantasies</title>
-        <meta name="theme-color" content="#596269" />
-        <meta name="description" content="The worst that could happen is happening to me" />
-        <meta property="og:title" content="Sugared Fantasies" />
-        <meta property="og:description" content="The worst that could happen is happening to me" />
-        <meta property="twitter:title" content="Sugared Fantasies" />
+        <title>blog</title>
+        <meta name="theme-color" content="#805a25" />
+        <meta name="description" content="resin seeping from a tree named cistus" />
+        <meta property="og:title" content="Labdanum " />
+        <meta property="og:description" content="resin seeping from a tree named cistus" />
+        <meta property="twitter:title" content="Labdanum" />
+        <link rel="stylesheet" href="https://fonts.bunny.net/css?family=Tangerine|Aref Ruqaa" />
         <link rel="stylesheet" href="css/blog.css" />
-        <style>
-        </style>
     </head>
     <body>
         <div class="container">
-            <aside class="left">
-                <img class="side" src="blog/side.webp">
-                <h1 style="background-color: #5f5852;">me</h1>
-                <div class="text">
-                    <i>Name</i> : Alia<br>
-                    <i>Birthday</i> : 6/4<br>
-                    <i>Album</i> : Horse Jumper of Love<br>
-                </div>
-                <h1 style="background-color: #5f5852;">currently</h1>
-                <div class="text">
-                    <i>Feeling</i> : dead<br>
-                    <i>Thinking</i> : sleeping<br>
-                    <i>Physically</i> : tired<br>
-                </div>
-                <div class="text" style="margin-top: 10px;">
-                    <i>Reading</i> : Zoo Station: The Story of Christiane F.<br>
-                    <i>Listening</i> : Ugly Brunette<br>
-                    <i>Playing</i> : nothing<br>
-                </div>
-            </aside>
-            <div class="right">
-                <header></header>
-                <div class="wrap">              
+            <div class="left">
+                <div class="side">
                     
-                    <div class="entry">
-                        <h1> ?? <span> 8/7</span></h1>
-                        <div class="content"> 
-                            
+                    <button class="btn active" data-target="post-2">
+                        <span>?? 8/7 </span>
+                    </button>
+                    <button class="btn" data-target="post-1">
+                        <span>updates 8/4</span>
+                    </button>
+                </div>
+                
+
+                <script src="https://labdanum.neocities.org/scripts/tapedeck.js"></script>
+                <tape-deck
+                    shuffle
+                    list="
+                              Housofpsychoticwomn
+                              Punish Demo II
+                              Arsony
+                              "
+                ></tape-deck>
+                <a href="/">← back</a>
+            </div>
+            <div class="right">
+            <!--
+
+                <div class="entry active" id="post-">
+                    <h1>Hello</h1>
+                    <p></p>
+                </div>
+
+            -->
+                <div class="entry active" id="post-2">
+                    <h1>??? </h1>
+                    <p>
+                        
+                        
                             what do i even dooo bruuuuhhhh I have nothing I have NOTHIGN!! I'm chopped as frik, my mom calls me a waste of her genetics bro like how does it get worse. Okay i think if i relasped
                             that would be considered as getting worse but shit that pink blade is CALLING my name! Zoo wee mama! I'm lazy and I just dont do anything because im not that interesting I guess. All
                             I do is like lay around and listen to music and then cry from time to time. 😭😭😭😭 and like I'm insecure about EVERYTHING im not quite sure anybody really knows me because I hate myself
@@ -59,14 +67,12 @@
                             or whatever carrie said. I think the worst thing that has happened to me is calling my exbf crying asking him why he did that to me and then him crying and saying that he didn't know and then I had 
                             to lowkey comfort him after. Boi you friggen molested me but only lowkey tho Like is it even sexual assualt if I didnt try to push him off, I mean I did i just kinda let him do whatever #loser? 
                             #victim maybe idk okay im gonna showermaxx and bathtubmaxx
+                    </p>
+                </div>
+                <div class="entry" id="post-1">
+                    <h1>Updates</h1>
+                    <p>
                         
-                        </div>
-                    </div>
-                    
-                    <div class="entry">
-                        <h1> bruuh <span> 8/4</span></h1>
-                        <div class="content"> 
-
                             So much has happened in the last 2 months, I've been put on prozac and honestly nothing much has changed. I've been having really weird dreams and sometimes i feel really sick after taking it but its whatever. 
                             I think once I go back to school i'll see more improvement or something idk... bruuh Okay lets see whats new. <br>
                             June : school ended, I got okay grades on my final exams. Could be worse since I didnt study like at all for any of them. I got like 80s or whatever idk I saw Evanescence but im not a big fan of their newest 
@@ -82,19 +88,26 @@
                             and christiane F so its whatever. Obsession was great, amazing and I would watch again. Prisoners was very intriguing, I liked it when he tortured the guy it was interesting. Backrooms was okay, I feel like it
                             was overhyped and I expected more. Eyes Wide Shut was also very good but i have no clue what any of it meant. The dude was just a cuck the entire time?? The cult part was amazing and I loved the music but
                             like it was nothing really. Thats kinda it for what ive been doing, uhh I'm gonna redo my about page and like idk something. <br> 
-                            
-                        
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="entry">
-                        <h1> deadass just playing in my face <span> 6/29</span></h1>
-                        <div class="content"> im gay</div>
-                    </div>
-                    
+                    </p>
                 </div>
+                
             </div>
         </div>
+        <script>
+            
+            const buttons = document.querySelectorAll(".btn");
+            const posts = document.querySelectorAll(".entry");
+
+            buttons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.dataset.target;
+                    posts.forEach(post => post.classList.remove("active"));
+                    document.getElementById(targetId).classList.add("active");
+
+                    buttons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                });
+            });
+        </script>
     </body>
 </html>
