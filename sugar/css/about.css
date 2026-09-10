@@ -1,167 +1,167 @@
- html {
-                scrollbar-color: #ffe7ad transparent;
-            }
-            * {
-                box-sizing: border-box;
-            }
-            ::selection {
-                color: #fffef1;
-                background: rgba(208, 190, 159, 0.7);
-            }
-            body {
-                background: #22201e;
-                font-family: Aref Ruqaa;
-            }
-            .container {
-                width: 850px;
-                height: 700px;
-                margin: 50px auto;
-                display: flex;
-                gap: 5px;
-             
-                animation: fade 0.4s ease;
-            }
+html {
+scrollbar-color: #ffe7ad transparent;
+}
+* {
+box-sizing: border-box;
+}
+::selection {
+color: #fffef1;
+background: rgba(208, 190, 159, 0.7);
+}
+body {
+background: #22201e;
+font-family: Aref Ruqaa;
+}
+.container {
+width: 850px;
+height: 700px;
+margin: 50px auto;
+display: flex;
+gap: 5px;
+
+animation: fade 0.4s ease;
+}
 
 
-       
-            @keyframes fade{
-                from{
-                    opacity: 0;
-                }
 
-                to{
-                    opacity: 1;
-                }
-            }
-            .left {
-                width: 25%;
-                border-right: 2px solid #4f4e45;
-                position: relative;
-            }
-            .carrie {
-                width: 85%;
-                float: right;
-                margin: 0px 5px 5px 0px;
-            }
-            hr {
-                clear: right;
-                color: #4f4e45;
-                margin: 0;
-                border: 1px solid;
-            }
-            h1 {
-                font-family: Tangerine;
-                margin: 0;
-            }
-            .left h1 {
-                margin: 10px 0px 0px 0px;
-                color: #ab8e62;
-            }
-            .box {
-                width: 98%;
-                height: 20%;
-                overflow: auto;
-                display: flex;
-                flex-wrap: wrap;
-            }
-            #albums img {
-                height: 64.7px;
-                width: 64.7px;
-                display: block;
-                margin: 2px;
-            }
-            #media img {
-                height: 84px;
-                width: 64px;
-                display: block;
-                margin: 2px;
-            }
-            a {
-                color: #6f6759;
-                text-decoration: none;
-                position: absolute;
-                bottom: 0;
-            }
-            a:hover {
-                color: #aea18a;
-            }
-            .right {
-                width: 74%;
-                position: relative;
-            }
-            .right h1 {
-                font-size: 4em;
-                width: fit-content;
-                background: linear-gradient(90deg, #fffdce, #5e622e);
-                background-clip: text;
-                color: transparent;
-                display: inline-block;
-            }
-            tape-deck {
-                color: #9e8162;
-                font-family: Aref Ruqaa;
-                background-color: #1f1d1c;
-                height: auto;
-                padding: 0px 5px 5px 5px;
-                margin-top: 30px;
-                font-size: 14px;
-                display: flex;
-                gap: 1em;
-                width: 50%;
-                float: right;
-                button {
-                    max-width: max-content;
-                }
+@keyframes fade{
+from{
+opacity: 0;
+}
 
-                select {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    contain: inline-size;
-                    overflow: hidden;
-                    flex: 1;
-                    padding-left: 1px;
-                }
-                :is(button, select):hover {
-                    color: #cfad87;
-                }
-            }
+to{
+opacity: 1;
+}
+}
+.left {
+width: 25%;
+border-right: 2px solid #4f4e45;
+position: relative;
+}
+.carrie {
+width: 85%;
+float: right;
+margin: 0px 5px 5px 0px;
+}
+hr {
+clear: right;
+color: #4f4e45;
+margin: 0;
+border: 1px solid;
+}
+h1 {
+font-family: Tangerine;
+margin: 0;
+}
+.left h1 {
+margin: 10px 0px 0px 0px;
+color: #ab8e62;
+}
+.box {
+width: 98%;
+height: 20%;
+overflow: auto;
+display: flex;
+flex-wrap: wrap;
+}
+#albums img {
+height: 64.7px;
+width: 64.7px;
+display: block;
+margin: 2px;
+}
+#media img {
+height: 84px;
+width: 64px;
+display: block;
+margin: 2px;
+}
+a {
+color: #6f6759;
+text-decoration: none;
+position: absolute;
+bottom: 0;
+}
+a:hover {
+color: #aea18a;
+}
+.right {
+width: 74%;
+position: relative;
+}
+.right h1 {
+font-size: 4em;
+width: fit-content;
+background: linear-gradient(90deg, #fffdce, #5e622e);
+background-clip: text;
+color: transparent;
+display: inline-block;
+}
+tape-deck {
+color: #9e8162;
+font-family: Aref Ruqaa;
+background-color: #1f1d1c;
+height: auto;
+padding: 0px 5px 5px 5px;
+margin-top: 30px;
+font-size: 14px;
+display: flex;
+gap: 1em;
+width: 50%;
+float: right;
+button {
+max-width: max-content;
+}
 
-            button,
-            select,
-            input {
-                border: 0;
-            }
+select {
+text-overflow: ellipsis;
+white-space: nowrap;
+contain: inline-size;
+overflow: hidden;
+flex: 1;
+padding-left: 1px;
+}
+:is(button, select):hover {
+color: #cfad87;
+}
+}
 
-            button,
-            select,
-            input {
-                color: unset;
-                font: unset;
-                background-color: unset;
-                padding: unset;
-            }
+button,
+select,
+input {
+border: 0;
+}
 
-            button,
-            select {
-                cursor: pointer;
-            }
-            p {
-                margin: 5px;
-                color: #dec9aa;
-                width: 90%;
-            }
-            .right hr {
-                position: absolute;
-                width: 100%;
-                left: -5px;
-                border: 1px solid;
-            }
-            .lily {
-                float: left;
-                width: 34%;
-            }
-            .cross {
-                position: absolute;
-                right: -6.5em;
-                top: 20em;
-            }
+button,
+select,
+input {
+color: unset;
+font: unset;
+background-color: unset;
+padding: unset;
+}
+
+button,
+select {
+cursor: pointer;
+}
+p {
+margin: 5px;
+color: #dec9aa;
+width: 90%;
+}
+.right hr {
+position: absolute;
+width: 100%;
+left: -5px;
+border: 1px solid;
+}
+.lily {
+float: left;
+width: 34%;
+}
+.cross {
+position: absolute;
+right: -6.5em;
+top: 20em;
+}
