@@ -1,338 +1,337 @@
+html { scrollbar-color: #ffe7ad transparent;
+}
 
-            html {  scrollbar-color: #ffe7ad transparent;  
-            }
+::selection {
+color: #fffef1;
+background: rgba(208, 190, 159, 0.70);
+}
+body{
+background: #fffaea;
+font-family: Aref Ruqaa ;
+}
+.container{
+width:800px;
+height:800px;
+margin:50px auto;
+margin-bottom: 150px;
 
-            ::selection {
-                color: #fffef1;
-                background: rgba(208, 190, 159, 0.70);
-            }
-            body{
-                background: #fffaea;
-                font-family:  Aref Ruqaa ;
-            }
-            .container{
-                width:800px;
-                height:800px;
-                margin:50px auto;
-                margin-bottom: 150px;
-                        
-                animation: fade 0.4s ease;
-            }
+animation: fade 0.4s ease;
+}
 
-       
-            @keyframes fade{
-                from{
-                    opacity: 0;
-                }
 
-                to{
-                    opacity: 1;
-                }
-            }
+@keyframes fade{
+from{
+opacity: 0;
+}
 
-            header{
-                height:9%;
-                border-bottom: dashed 1px #ab6a26;
-                position: relative;
-            }
-            h1{
-                font-family: Tangerine;
-                padding:0;
-                margin:0;
-                color:rgb(138, 97, 85);
-            }
-            
-            h1  span{
-                font-size:.7em;
-                font-weight: 100;
-                color:rgb(186, 153, 143);
-                transition:.8s;
-            }
-            h1 span:hover{
-                transition:.8s;
-                color:rgb(138, 97, 85);
-            }
-            header h1{
-                bottom:-13.4px;
-                font-size:3em;
-                left:5px;
-                
-                position: absolute;
-            }
-            .container2{
+to{
+opacity: 1;
+}
+}
 
-                background:url(/index/bg.webp);
-                width:100%;
-                height:91%;
-                display: flex;
-            }
-            .left{
-                width:70%;
-                display: flex;
-            }
-            .right{
-                width:30%;
-            }
-            /*  Left content starts here  */
-            .nav{
-                height:100%;
-                width:30%;
-            }
-            .content{
-                height:100%;
-                width:70%;
-            }
-            nav{
-                width:100%;
-                height:45%;
-                margin-top:55%;
-            }
-            nav h1{
-                font-family: Tangerine;
-                padding:0;
-                margin:0;
-                color:rgb(138, 97, 85);
-                font-size: 1.86em;
-                border-bottom: dashed 1px #ab6a26;
-            }
-            nav a{
-                display: block;
-                line-height: 1.3em;
-                color:#ac774a;
-                text-decoration: none;
-            }
-            nav a::before{
-                content:'❋';
-                margin-right: 5px;
-            }
-            nav a:hover{
-                font-style: italic;
-                margin-left:5px;
-                color:#d66200;
-            }
-            
-            main{
-                background: radial-gradient(circle,#ffde8e 0%, rgba(255, 255, 255, 0) 80%);
-                width:100%;
-                height:35%;
-                padding:1px;
-                color:#673812;
-                overflow: auto;
-                font-size:.9em;
-            }
-            .labdanum{
+header{
+height:9%;
+border-bottom: dashed 1px #ab6a26;
+position: relative;
+}
+h1{
+font-family: Tangerine;
+padding:0;
+margin:0;
+color:rgb(138, 97, 85);
+}
 
-                width:20%;
-                float:left;
-                margin-top:15px;
-                margin-right:5px;
-            }
-            p{
-                margin:0;
-                margin-top:5px;
-            }   
+h1 span{
+font-size:.7em;
+font-weight: 100;
+color:rgb(186, 153, 143);
+transition:.8s;
+}
+h1 span:hover{
+transition:.8s;
+color:rgb(138, 97, 85);
+}
+header h1{
+bottom:-13.4px;
+font-size:3em;
+left:5px;
 
-            .pallas {
-                width: 25%;
-                height: 95%;
-                overflow: auto;
-                margin-top:5px;
-                float:left;
-            }
+position: absolute;
+}
+.container2{
 
-            .pallas img {
-                width: 100%;
-            }
-            .fanlistings{
-                width:68%;
-                overflow: auto;
-                display: inline-block;
-                margin-top:5px;
-                height:60%;
-                margin-left:10px;
-                filter: sepia(0.5);
-            }
-            .buttons2 {
-                width: 69%;
-                height: 33%;
-                overflow: auto;
-                margin-left:6.75em;
-            }
-            
-            .buttons2 img {
-                width: 88px;
-                height: 31px;
-                filter: sepia(0.5);
-            }
-            .block{
-                width:100%;
-                height:30%;
-            }
-            .side1{
-                width:49%;
-                height:34%;
-                margin-top:5px;
-                display: inline-block;
-                background:url(/index/med.webp);
-                background-size: 100% 100%;
-                opacity: 0;
-                transition:.9s
-            }
-            .side1:hover{opacity: 1; transition:.9s}
-            .feed{
-                width:49%;
-                            height:34%;
-                margin-top:5px;
-                float:right;
-                padding:1px;
-                overflow-auto;
-            }
+background:url(/index/bg.webp);
+width:100%;
+height:91%;
+display: flex;
+}
+.left{
+width:70%;
+display: flex;
+}
+.right{
+width:30%;
+}
+/* Left content starts here */
+.nav{
+height:100%;
+width:30%;
+}
+.content{
+height:100%;
+width:70%;
+}
+nav{
+width:100%;
+height:45%;
+margin-top:55%;
+}
+nav h1{
+font-family: Tangerine;
+padding:0;
+margin:0;
+color:rgb(138, 97, 85);
+font-size: 1.86em;
+border-bottom: dashed 1px #ab6a26;
+}
+nav a{
+display: block;
+line-height: 1.3em;
+color:#ac774a;
+text-decoration: none;
+}
+nav a::before{
+content:'❋';
+margin-right: 5px;
+}
+nav a:hover{
+font-style: italic;
+margin-left:5px;
+color:#d66200;
+}
 
-            tape-deck {
-                color: #ad7940;
-                font-family: Aref Ruqaa;
-                background-color: rgba(254, 223, 169, 0.7);
-                height: auto;
-                position: relative;
-                padding:5px;
-                margin-top:5px;
-                font-size:14px;
-                display: flex;
-                align-items: center;
-                gap: 1em;
+main{
+background: radial-gradient(circle,#ffde8e 0%, rgba(255, 255, 255, 0) 80%);
+width:100%;
+height:35%;
+padding:1px;
+color:#673812;
+overflow: auto;
+font-size:.9em;
+}
+.labdanum{
 
-                button {
-                    max-width: max-content;
-                }
+width:20%;
+float:left;
+margin-top:15px;
+margin-right:5px;
+}
+p{
+margin:0;
+margin-top:5px;
+}
 
-                select {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    contain: inline-size;
-                    overflow: hidden;
-                    flex: 1;
-                    background-color: rgba(254, 223, 169, 0.7);
-                    padding-left:1px;
-                }
-                :is(button, select):hover {
-                    color:#7b4912;
-                }
-            }
+.pallas {
+width: 25%;
+height: 95%;
+overflow: auto;
+margin-top:5px;
+float:left;
+}
 
-            button, select, input {
-                border: 0;
-            }
-            
-            button, select, input {
-                color: unset;
-                font: unset;
-                background-color: unset;
-                padding: unset;
-            }
+.pallas img {
+width: 100%;
+}
+.fanlistings{
+width:68%;
+overflow: auto;
+display: inline-block;
+margin-top:5px;
+height:60%;
+margin-left:10px;
+filter: sepia(0.5);
+}
+.buttons2 {
+width: 69%;
+height: 33%;
+overflow: auto;
+margin-left:6.75em;
+}
 
-            button, select {
-                cursor: pointer;
-            }
-            #lastfm {
-                width: 100%;
-                height: 85px;
-                background-color: rgba(183, 145, 72, 0.4);
-                overflow: auto;
-                word-break: break-word;
-                margin-top:10px;
-            }
+.buttons2 img {
+width: 88px;
+height: 31px;
+filter: sepia(0.5);
+}
+.block{
+width:100%;
+height:30%;
+}
+.side1{
+width:49%;
+height:34%;
+margin-top:5px;
+display: inline-block;
+background:url(/index/med.webp);
+background-size: 100% 100%;
+opacity: 0;
+transition:.9s
+}
+.side1:hover{opacity: 1; transition:.9s}
+.feed{
+width:49%;
+height:34%;
+margin-top:5px;
+float:right;
+padding:1px;
+overflow-auto;
+}
 
-            #lastfm a {
-                font-size: 12px;
-                color: #3a1f10;
-            }
+tape-deck {
+color: #ad7940;
+font-family: Aref Ruqaa;
+background-color: rgba(254, 223, 169, 0.7);
+height: auto;
+position: relative;
+padding:5px;
+margin-top:5px;
+font-size:14px;
+display: flex;
+align-items: center;
+gap: 1em;
 
-            #lastfmwrapper {
-                display: flex;
-                flex-wrap: wrap;
-            }
+button {
+max-width: max-content;
+}
 
-            #lastfmimgbox {
-                width: 75px;
-                height: 100%;
-                padding: 5px;
-            }
+select {
+text-overflow: ellipsis;
+white-space: nowrap;
+contain: inline-size;
+overflow: hidden;
+flex: 1;
+background-color: rgba(254, 223, 169, 0.7);
+padding-left:1px;
+}
+:is(button, select):hover {
+color:#7b4912;
+}
+}
 
-            #trackart {
-                height: 65px;
-                width: 65px;
-                margin-top: 4px;
-            }
+button, select, input {
+border: 0;
+}
 
-            .trackInfo {
-                width: 150px;
-                height: 100%;
-                justify-content: center;
-            }
+button, select, input {
+color: unset;
+font: unset;
+background-color: unset;
+padding: unset;
+}
 
-            .trackInfo p {
-                border-bottom: 1px dashed #7f4d2f;
-                font-size: 14px;
-                margin: 0px;
-            }
-            
-            .rabbit{
-                width:100%;
-                
-                filter:brightness(1.2) saturate(.9);
-                opacity: .9;
-                
-            }
-            .buttons{
-                display: flex;
-                gap:5px;
-                background: radial-gradient(circle,#fddac0 0%, rgba(255, 250, 234,  0.92) 100%);
-                color:#593f13;
-                padding:5px;
-                font-size:12px;
-                img{
-                    height:31px;
-                }
-                p{
-                    margin:0;
-                }
-            }
-            
-            .cliques {
-                padding: 5px;
-                overflow: auto;
-                font-size: 13px;
-                text-align: center;
-            }
+button, select {
+cursor: pointer;
+}
+#lastfm {
+width: 100%;
+height: 85px;
+background-color: rgba(183, 145, 72, 0.4);
+overflow: auto;
+word-break: break-word;
+margin-top:10px;
+}
 
-            .cliques a {
-                color: #5a311b;
-                font-style: italic;
-                text-decoration: none;
-            }
-            .lyrics{
-                font-family:Tangerine;
-                font-size:1.45em;
-                font-style: italic;
-                color: #ebdba7;
-                transition: .5s;
-            }
-            .lyrics:hover{
-                font-style: normal;
-                color: #896130;
-                transition: .5s;
-            }
-            
-            footer{
-                height: fit-content;
-                font-family: tangerine;
-                font-size:25px;
-                color:#60503b;
-                a{
-                    
-                color:#884d00;
-                }
-            }
-            footer a:hover{
-                font-weight: bold;
-            }
+#lastfm a {
+font-size: 12px;
+color: #3a1f10;
+}
+
+#lastfmwrapper {
+display: flex;
+flex-wrap: wrap;
+}
+
+#lastfmimgbox {
+width: 75px;
+height: 100%;
+padding: 5px;
+}
+
+#trackart {
+height: 65px;
+width: 65px;
+margin-top: 4px;
+}
+
+.trackInfo {
+width: 150px;
+height: 100%;
+justify-content: center;
+}
+
+.trackInfo p {
+border-bottom: 1px dashed #7f4d2f;
+font-size: 14px;
+margin: 0px;
+}
+
+.rabbit{
+width:100%;
+
+filter:brightness(1.2) saturate(.9);
+opacity: .9;
+
+}
+.buttons{
+display: flex;
+gap:5px;
+background: radial-gradient(circle,#fddac0 0%, rgba(255, 250, 234, 0.92) 100%);
+color:#593f13;
+padding:5px;
+font-size:12px;
+img{
+height:31px;
+}
+p{
+margin:0;
+}
+}
+
+.cliques {
+padding: 5px;
+overflow: auto;
+font-size: 13px;
+text-align: center;
+}
+
+.cliques a {
+color: #5a311b;
+font-style: italic;
+text-decoration: none;
+}
+.lyrics{
+font-family:Tangerine;
+font-size:1.45em;
+font-style: italic;
+color: #ebdba7;
+transition: .5s;
+}
+.lyrics:hover{
+font-style: normal;
+color: #896130;
+transition: .5s;
+}
+
+footer{
+height: fit-content;
+font-family: tangerine;
+font-size:25px;
+color:#60503b;
+a{
+
+color:#884d00;
+}
+}
+footer a:hover{
+font-weight: bold;
+}
