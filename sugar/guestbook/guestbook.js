@@ -17,7 +17,7 @@ Have fun! Bug reports are encouraged if you happen to run into any issues.
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = '/guestbook/comment-widget-pink.css';
+const s_stylePath = '/guestbook/guestbook.css';
 const s_formId = '1FAIpQLScBgturaHQPjNRj12S9FhrgRUmUkXg8AUPE5IQE75fdqiJcIw';
 const s_nameId = '870975100';
 const s_websiteId = '784283028';
