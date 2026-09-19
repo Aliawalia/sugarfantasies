@@ -4,20 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>blog</title>
+  <title>Thoughts</title>
   <meta name="theme-color" content="#805a25" />
   <meta name="description" content="resin seeping from a tree named cistus" />
   <meta property="og:title" content="Labdanum " />
   <meta property="og:description" content="resin seeping from a tree named cistus" />
   <meta property="twitter:title" content="Labdanum" />
   <link rel="stylesheet" href="https://fonts.bunny.net/css?family=Tangerine|Aref Ruqaa" />
-  <link rel="stylesheet" href="css/blog.css" />
+  <style>
+    
+  </style>
 </head>
 
 <body>
   <div class="container">
     <div class="left">
-      <div class="side">
+      <img src="blog/pfp.webp" class="pfp">
+      <span class="month">September '26</span>
+      <div class="buttons">
+        <button class="btn " data-target="post-6">
+          <span>recent 9/19 </span>
+        </button>
+      </div>
+      <span class="month">August '26</span>
+      <div class="buttons">
 
         <button class="btn " data-target="post-5">
           <span>Completion? 8/13 </span>
@@ -32,18 +42,12 @@
         <button class="btn" data-target="post-1">
           <span>updates 8/4</span>
         </button>
+
       </div>
-
-
-      <script src="https://labdanum.neocities.org/scripts/tapedeck.js"></script>
-      <tape-deck shuffle list="
-                              Housofpsychoticwomn
-                              Punish Demo II
-                              Arsony
-                              "></tape-deck>
       <a href="/">← back</a>
     </div>
     <div class="right">
+
       <!--
 
                 <div class="entry active" id="post-">
@@ -155,8 +159,10 @@
         </p>
       </div>
 
+
     </div>
   </div>
+
   <script>
     const buttons = document.querySelectorAll(".btn");
     const posts = document.querySelectorAll(".entry");
