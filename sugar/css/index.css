@@ -1,337 +1,402 @@
-html { scrollbar-color: #ffe7ad transparent;
-}
+html {
+      scrollbar-color: #000000 transparent;
+    }
 
-::selection {
-color: #fffef1;
-background: rgba(208, 190, 159, 0.70);
-}
-body{
-background: #fffaea;
-font-family: Aref Ruqaa ;
-}
-.container{
-width:800px;
-height:800px;
-margin:50px auto;
-margin-bottom: 150px;
+    * {
+      box-sizing: border-box;
+    }
 
-animation: fade 0.4s ease;
-}
+    ::selection {
+      color: #ffffff;
+      background: rgba(87, 0, 0, 0.7);
+    }
 
+    body {
+      background: #fff1c5;
+      font-family: Aref Ruqaa;
+    }
 
-@keyframes fade{
-from{
-opacity: 0;
-}
+    .container {
+      width: 750px;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 1px;
+      gap: 5px;
+      animation: fade 0.4s ease;
+      height: 900px;
+      margin-bottom: 50px;
+    }
 
-to{
-opacity: 1;
-}
-}
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
 
-header{
-height:9%;
-border-bottom: dashed 1px #ab6a26;
-position: relative;
-}
-h1{
-font-family: Tangerine;
-padding:0;
-margin:0;
-color:rgb(138, 97, 85);
-}
+      to {
+        opacity: 1;
+      }
+    }
 
-h1 span{
-font-size:.7em;
-font-weight: 100;
-color:rgb(186, 153, 143);
-transition:.8s;
-}
-h1 span:hover{
-transition:.8s;
-color:rgb(138, 97, 85);
-}
-header h1{
-bottom:-13.4px;
-font-size:3em;
-left:5px;
+    header {
+      height: 9%;
+      border-bottom: dashed 1px #643300;
+      position: relative;
+      width: 100%;
+    }
 
-position: absolute;
-}
-.container2{
+    header h1 {
+      bottom: -13.4px;
+      font-size: 3em;
+      left: 5px;
+      position: absolute;
+    }
 
-background:url(/index/bg.webp);
-width:100%;
-height:91%;
-display: flex;
-}
-.left{
-width:70%;
-display: flex;
-}
-.right{
-width:30%;
-}
-/* Left content starts here */
-.nav{
-height:100%;
-width:30%;
-}
-.content{
-height:100%;
-width:70%;
-}
-nav{
-width:100%;
-height:45%;
-margin-top:55%;
-}
-nav h1{
-font-family: Tangerine;
-padding:0;
-margin:0;
-color:rgb(138, 97, 85);
-font-size: 1.86em;
-border-bottom: dashed 1px #ab6a26;
-}
-nav a{
-display: block;
-line-height: 1.3em;
-color:#ac774a;
-text-decoration: none;
-}
-nav a::before{
-content:'❋';
-margin-right: 5px;
-}
-nav a:hover{
-font-style: italic;
-margin-left:5px;
-color:#d66200;
-}
+    h1 {
+      font-family: Tangerine;
+      padding: 0;
+      margin: 0;
+      color: #c84444;
+    }
 
-main{
-background: radial-gradient(circle,#ffde8e 0%, rgba(255, 255, 255, 0) 80%);
-width:100%;
-height:35%;
-padding:1px;
-color:#673812;
-overflow: auto;
-font-size:.9em;
-}
-.labdanum{
+    h1 span {
+      font-size: .7em;
+      font-weight: 100;
+      color: #973535;
+      transition: .8s;
+    }
 
-width:20%;
-float:left;
-margin-top:15px;
-margin-right:5px;
-}
-p{
-margin:0;
-margin-top:5px;
-}
+    h1 span:hover {
+      transition: .8s;
+      color: rgb(58, 2, 2);
+    }
 
-.pallas {
-width: 25%;
-height: 95%;
-overflow: auto;
-margin-top:5px;
-float:left;
-}
+    .container2 {
 
-.pallas img {
-width: 100%;
-}
-.fanlistings{
-width:68%;
-overflow: auto;
-display: inline-block;
-margin-top:5px;
-height:60%;
-margin-left:10px;
-filter: sepia(0.5);
-}
-.buttons2 {
-width: 69%;
-height: 33%;
-overflow: auto;
-margin-left:6.75em;
-}
+      width: 100%;
+      height: 91%;
+      display: flex;
+    }
 
-.buttons2 img {
-width: 88px;
-height: 31px;
-filter: sepia(0.5);
-}
-.block{
-width:100%;
-height:30%;
-}
-.side1{
-width:49%;
-height:34%;
-margin-top:5px;
-display: inline-block;
-background:url(/index/med.webp);
-background-size: 100% 100%;
-opacity: 0;
-transition:.9s
-}
-.side1:hover{opacity: 1; transition:.9s}
-.feed{
-width:49%;
-height:34%;
-margin-top:5px;
-float:right;
-padding:1px;
-overflow-auto;
-}
+    .left {
+      width: 28%;
+      border-right: dashed 1px #3b1e00;
 
-tape-deck {
-color: #ad7940;
-font-family: Aref Ruqaa;
-background-color: rgba(254, 223, 169, 0.7);
-height: auto;
-position: relative;
-padding:5px;
-margin-top:5px;
-font-size:14px;
-display: flex;
-align-items: center;
-gap: 1em;
+    }
 
-button {
-max-width: max-content;
-}
+    .right {
+      width: 70%;
 
-select {
-text-overflow: ellipsis;
-white-space: nowrap;
-contain: inline-size;
-overflow: hidden;
-flex: 1;
-background-color: rgba(254, 223, 169, 0.7);
-padding-left:1px;
-}
-:is(button, select):hover {
-color:#7b4912;
-}
-}
+      position: relative;
+    }
 
-button, select, input {
-border: 0;
-}
+    .boi {
+      width: 95%;
+      margin: 0 auto;
+      display: block;
+      margin-top: 15px;
+      outline: 1px dashed #904f1c;
+      border: 2px solid #ffffff;
+    }
 
-button, select, input {
-color: unset;
-font: unset;
-background-color: unset;
-padding: unset;
-}
+    .left h2 {
+      font-family: tangerine;
+      font-weight: bold;
+      border-bottom: dashed 1px #643300;
+      padding: 0;
+      margin: 0;
+      color: rgb(99, 37, 18);
+      font-size: 1.86em;
+      width: 100%;
+      margin-top: 15px;
+    }
 
-button, select {
-cursor: pointer;
-}
-#lastfm {
-width: 100%;
-height: 85px;
-background-color: rgba(183, 145, 72, 0.4);
-overflow: auto;
-word-break: break-word;
-margin-top:10px;
-}
+    nav a {
+      text-decoration: none;
+      display: block;
+      line-height: 1.3em;
+      color: #6c3300;
+      width: 90%;
+      margin-left: 5px;
+    }
 
-#lastfm a {
-font-size: 12px;
-color: #3a1f10;
-}
+    nav a:hover {
+      width: 95%;
+      margin-left: 10px;
+      color: #d66200;
+    }
 
-#lastfmwrapper {
-display: flex;
-flex-wrap: wrap;
-}
+    nav a::before {
+      content: '❇';
+      margin-right: 5px;
+    }
 
-#lastfmimgbox {
-width: 75px;
-height: 100%;
-padding: 5px;
-}
+    #player:hover {
+      z-index: 1;
+      position: relative;
+    }
 
-#trackart {
-height: 65px;
-width: 65px;
-margin-top: 4px;
-}
+    #player {
+      display: flex;
+      width: 95%;
+      height: 20%;
+      padding: 5px;
+      background: #e6de96;
+      border: 1px solid #8c9740;
+      margin-left: 3px;
+      margin-top: 15px;
+    }
 
-.trackInfo {
-width: 150px;
-height: 100%;
-justify-content: center;
-}
+    #player-song {
+      font-weight: 600;
+      font-size: 1.2em;
+      color: #6b331c;
+      margin: 0;
+      padding: 0;
+    }
 
-.trackInfo p {
-border-bottom: 1px dashed #7f4d2f;
-font-size: 14px;
-margin: 0px;
-}
+    #player a {
+      color: #321a0c;
+    }
 
-.rabbit{
-width:100%;
+    #player a:hover {
+      color: #953700;
+      font-style: italic;
+    }
 
-filter:brightness(1.2) saturate(.9);
-opacity: .9;
+    #player-album-art {
+      width: 30%;
+    }
 
-}
-.buttons{
-display: flex;
-gap:5px;
-background: radial-gradient(circle,#fddac0 0%, rgba(255, 250, 234, 0.92) 100%);
-color:#593f13;
-padding:5px;
-font-size:12px;
-img{
-height:31px;
-}
-p{
-margin:0;
-}
-}
+    #player-artist {
+      font-style: italic;
 
-.cliques {
-padding: 5px;
-overflow: auto;
-font-size: 13px;
-text-align: center;
-}
+    }
 
-.cliques a {
-color: #5a311b;
-font-style: italic;
-text-decoration: none;
-}
-.lyrics{
-font-family:Tangerine;
-font-size:1.45em;
-font-style: italic;
-color: #ebdba7;
-transition: .5s;
-}
-.lyrics:hover{
-font-style: normal;
-color: #896130;
-transition: .5s;
-}
+    #player-song {
+      word-break: break-all
+    }
 
-footer{
-height: fit-content;
-font-family: tangerine;
-font-size:25px;
-color:#60503b;
-a{
+    #player-status {
+      display: none;
+    }
 
-color:#884d00;
-}
-}
-footer a:hover{
-font-weight: bold;
-}
+    #player-progress-container {
+      height: 5px;
+      border: 1px #af6e50 solid;
+      margin: 5px 0;
+      background: #d4af90;
+    }
+
+    #player-progress {
+      background: #fff1e9;
+      height: 100%;
+      border-right: 1px #af6e50 solid;
+    }
+
+    #player-time {
+      font-size: 0.75em;
+      text-align: right;
+    }
+
+    #player-links {
+      text-transform: lowercase;
+      text-align: right;
+      font-size: 0.8em;
+    }
+
+    #player-content {
+      width: 69%;
+      margin-left: 5px;
+    }
+
+    .track-art {
+      min-width: 30%;
+      margin-right: 5px;
+    }
+
+    .track-title {
+      font-weight: 600;
+      padding: 0;
+      color: #4b0000;
+    }
+
+    .track-artist {
+      font-size: 0.8em;
+      font-style: italic;
+    }
+
+    .track-info {
+      display: block;
+      float: right;
+      margin-top: -.5em;
+      color: #ffede3;
+    }
+
+    .music-row {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin: 10px 0;
+      background: #b84a4a;
+      border: 1px solid #5f0e0e;
+      padding: 5px;
+      width: 97%;
+    }
+
+    #lastfm-top {
+      height: 15%;
+      overflow: auto;
+    }
+
+    .horses {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .track-title a {
+      color: #fff9dc;
+    }
+
+    main {
+      background: radial-gradient(circle, #ffde8e 0%, rgba(255, 255, 255, 0) 80%);
+      width: 98%;
+      height: 100%;
+      padding: 1px;
+      color: #673812;
+      overflow: auto;
+      font-size: .9em;
+      margin-left: 5px;
+    }
+
+    .labdanum {
+
+      width: 20%;
+      float: left;
+      margin-top: 15px;
+      margin-right: 5px;
+    }
+
+    p {
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    .flex1 {
+      display: flex;
+      height: 30%;
+      overflow: auto;
+    }
+
+    .fanlistings {
+      width: 50px;
+      height: 98%;
+      overflow: auto;
+      margin-top: 5px;
+      filter: sepia(0.5);
+    }
+
+    .fanlistings img {
+      width: 100%;
+    }
+
+    .flex2 {
+      display: flex;
+      height: 25%;
+      padding: 5px;
+      position: relative;
+    }
+
+    .button {
+
+      position: relative;
+    }
+
+    .button h2 {
+      font-family: Tangerine;
+      padding: 3px 10px 0px 2px;
+      margin: 0;
+      color: rgb(99, 37, 18);
+      font-size: 1.86em;
+      width: fit-content;
+      background: rgba(255, 226, 162, 0.69);
+      border-left: 2px solid #c0875f;
+      margin-bottom: 2px;
+    }
+
+    .button img {
+      margin: 3px 0px 0px 3px;
+    }
+
+    .buttons2 {
+      width: 89px;
+      height: 110px;
+      overflow: auto;
+
+    }
+
+    .buttons2 img {
+      width: 97%;
+    }
+
+    .feed {
+      width: 190px;
+      height: 100px;
+    }
+
+    .cliques {
+      padding: 5px;
+      overflow: auto;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .cliques a {
+      color: #5a311b;
+      font-style: italic;
+      text-decoration: none;
+    }
+
+    .side {
+      height: 100%;
+      margin-top: 5px;
+      position: absolute;
+      right: -20px;
+    }
+
+    .thing {
+      height: 35%;
+      position: absolute;
+      right: -6.7em;
+      bottom: 0;
+    }
+
+    .horse {
+      width: 55%;
+      position: absolute;
+      left: -1.5em;
+      bottom: -1.5em;
+      z-index: 2;
+    }
+
+    footer {
+      height: fit-content;
+      font-family: tangerine;
+      font-size: 25px;
+      color: #60503b;
+      margin-left: 8.3em;
+      margin-top: .8em;
+      z-index: 20;
+      position: relative;
+
+      a {
+
+        color: #884d00;
+      }
+    }
+
+    footer a:hover {
+      font-weight: bold;
+    }
