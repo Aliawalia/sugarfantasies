@@ -335,6 +335,7 @@ html {
       height: 110px;
       overflow: auto;
 
+  image-rendering: pixelated;
     }
 
     .buttons2 img {
