@@ -15,7 +15,17 @@ html {
       background: #fff1c5;
       font-family: Aref Ruqaa;
     }
+  &::before {
+    content: "";
+    background: url(/index/clouds.webp);
 
+    opacity: 0.25;
+    position: fixed;
+    inset: 0;
+
+
+  }
+}
     .container {
       width: 750px;
       margin: 0 auto;
