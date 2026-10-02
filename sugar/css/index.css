@@ -15,7 +15,7 @@ html {
       background: #fff1c5;
       font-family: Aref Ruqaa;
     }
-  &::before {
+  body::before {
     content: "";
     background: url(/index/clouds.webp);
 
@@ -25,7 +25,7 @@ html {
 
 
   }
-}
+
     .container {
       width: 750px;
       margin: 0 auto;
