@@ -12,18 +12,10 @@ background: rgba(87, 0, 0, 0.7);
 }
 
 body {
-background: #fff1c5;
+      background-image: linear-gradient(to right, #ebe1c0), url('https://labdanum.neocities.org/index/clouds.webp');
+      background-blend-mode:hard-light;
+      background-size: cover;
 font-family: Aref Ruqaa;
-}
-body::before {
-content: "";
-background: url(/index/clouds.webp);
-
-opacity: 0.25;
-position: fixed;
-inset: 0;
-
-
 }
 
 .container {
