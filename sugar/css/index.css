@@ -1,407 +1,406 @@
-html {
-scrollbar-color: #000000 transparent;
-}
+:root {
+      --fade: fade 0.6s steps(8, jump-none);
+      --gold: #e9bc85;
+      --outline: 1px 1px 0 #2c1700, -1px -1px 0 #2c1700, -1px 1px 0 #2c1700, 1px -1px 0 #2c1700;
+      --frame: 16px solid transparent;
+      --frame-image: url('/index/border.webp') 34 round;
+    }
 
-* {
-box-sizing: border-box;
-}
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-::selection {
-color: #ffffff;
-background: rgba(87, 0, 0, 0.7);
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-      background-image: linear-gradient(to right, #ebe1c0), url('https://labdanum.neocities.org/index/clouds.webp');
-      background-blend-mode:hard-light;
+    html {
+      scrollbar-color: #545243 transparent;
+    }
+
+    ::selection {
+      color: #ffffff;
+      background: rgba(87, 0, 0, 0.7);
+    }
+
+    body {
+      background: url(/index/bg.webp);
       background-size: cover;
-font-family: Aref Ruqaa;
-}
-
-.container {
-width: 750px;
-margin: 0 auto;
-margin-top: 50px;
-padding: 1px;
-gap: 5px;
-animation: fade 0.4s ease;
-height: 900px;
-margin-bottom: 50px;
-z-index: 50;
-position: relative;
-}
-
-@keyframes fade {
-from {
-opacity: 0;
-}
-
-to {
-opacity: 1;
-}
-}
-
-header {
-height: 9%;
-border-bottom: dashed 1px #643300;
-position: relative;
-width: 100%;
-}
-
-header h1 {
-bottom: -13.4px;
-font-size: 3em;
-left: 5px;
-position: absolute;
-}
-
-h1 {
-font-family: Tangerine;
-padding: 0;
-margin: 0;
-color: #c84444;
-}
-
-h1 span {
-font-size: .7em;
-font-weight: 100;
-color: #973535;
-transition: .8s;
-}
-
-h1 span:hover {
-transition: .8s;
-color: rgb(58, 2, 2);
-}
-
-.container2 {
-
-width: 100%;
-height: 91%;
-display: flex;
-}
-
-.left {
-width: 28%;
-border-right: dashed 1px #3b1e00;
-
-}
-
-.right {
-width: 70%;
-
-position: relative;
-}
-
-.boi {
-width: 95%;
-margin: 0 auto;
-display: block;
-margin-top: 15px;
-outline: 1px dashed #904f1c;
-border: 2px solid #ffffff;
-}
-
-.left h2 {
-font-family: tangerine;
-font-weight: bold;
-border-bottom: dashed 1px #643300;
-padding: 0;
-margin: 0;
-color: rgb(99, 37, 18);
-font-size: 1.86em;
-width: 100%;
-margin-top: 15px;
-}
-
-nav a {
-text-decoration: none;
-display: block;
-line-height: 1.3em;
-color: #6c3300;
-width: 90%;
-margin-left: 5px;
-}
-
-nav a:hover {
-width: 95%;
-margin-left: 10px;
-color: #d66200;
-}
-
-nav a::before {
-content: '❇';
-margin-right: 5px;
-}
-
-#player:hover {
-z-index: 1;
-position: relative;
-}
-
-#player {
-display: flex;
-width: 95%;
-height: 20%;
-padding: 5px;
-background: #e6de96;
-border: 1px solid #8c9740;
-margin-left: 3px;
-margin-top: 15px;
-}
-
-#player-song {
-font-weight: 600;
-font-size: 1.2em;
-color: #6b331c;
-margin: 0;
-padding: 0;
-}
-
-#player a {
-color: #321a0c;
-}
-
-#player a:hover {
-color: #953700;
-font-style: italic;
-}
-
-#player-album-art {
-width: 30%;
-}
-
-#player-artist {
-font-style: italic;
-
-}
-
-#player-song {
-word-break: break-all
-}
-
-#player-status {
-display: none;
-}
-
-#player-progress-container {
-height: 5px;
-border: 1px #af6e50 solid;
-margin: 5px 0;
-background: #d4af90;
-}
-
-#player-progress {
-background: #fff1e9;
-height: 100%;
-border-right: 1px #af6e50 solid;
-}
-
-#player-time {
-font-size: 0.75em;
-text-align: right;
-}
-
-#player-links {
-text-transform: lowercase;
-text-align: right;
-font-size: 0.8em;
-}
-
-#player-content {
-width: 69%;
-margin-left: 5px;
-}
-
-.track-art {
-min-width: 30%;
-margin-right: 5px;
-}
-
-.track-title {
-font-weight: 600;
-padding: 0;
-color: #4b0000;
-}
-
-.track-artist {
-font-size: 0.8em;
-font-style: italic;
-}
-
-.track-info {
-display: block;
-float: right;
-margin-top: -.5em;
-color: #ffede3;
-}
-
-.music-row {
-display: flex;
-align-items: center;
-gap: 3px;
-margin: 10px 0;
-background: #b84a4a;
-border: 1px solid #5f0e0e;
-padding: 5px;
-width: 97%;
-}
-
-#lastfm-top {
-height: 15%;
-overflow: auto;
-}
-
-.horses {
-width: 90%;
-margin: 0 auto;
-display: block;
-margin-top: 10px;
-margin-bottom: 10px;
-}
-
-.track-title a {
-color: #fff9dc;
-}
-
-main {
-background: radial-gradient(circle, #ffde8e 0%, rgba(255, 255, 255, 0) 80%);
-width: 98%;
-height: 100%;
-padding: 1px;
-color: #673812;
-overflow: auto;
-font-size: .9em;
-margin-left: 5px;
-}
-
-.labdanum {
-
-width: 20%;
-float: left;
-margin-top: 15px;
-margin-right: 5px;
-}
-
-p {
-margin: 0;
-margin-top: 5px;
-}
-
-.flex1 {
-display: flex;
-height: 30%;
-overflow: auto;
-}
-
-.fanlistings {
-width: 50px;
-height: 98%;
-overflow: auto;
-margin-top: 5px;
-filter: sepia(0.5);
-}
-
-.fanlistings img {
-width: 100%;
-}
-
-.flex2 {
-display: flex;
-height: 25%;
-padding: 5px;
-position: relative;
-}
-
-.button {
-
-position: relative;
-}
-
-.button h2 {
-font-family: Tangerine;
-padding: 3px 10px 0px 2px;
-margin: 0;
-color: rgb(99, 37, 18);
-font-size: 1.86em;
-width: fit-content;
-background: rgba(255, 226, 162, 0.69);
-border-left: 2px solid #c0875f;
-margin-bottom: 2px;
-}
-
-.button img {
-margin: 3px 0px 0px 3px;
-}
-
-.buttons2 {
-width: 89px;
-height: 110px;
-overflow: auto;
-
-image-rendering: pixelated;
-}
-
-.buttons2 img {
-width: 97%;
-}
-
-.feed {
-width: 190px;
-height: 100px;
-}
-
-.cliques {
-padding: 5px;
-overflow: auto;
-font-size: 13px;
-text-align: center;
-}
-
-.cliques a {
-color: #5a311b;
-font-style: italic;
-text-decoration: none;
-}
-
-.side {
-height: 100%;
-margin-top: 5px;
-position: absolute;
-right: -20px;
-}
-
-.thing {
-height: 35%;
-position: absolute;
-right: -6.7em;
-bottom: 0;
-}
-
-.horse {
-width: 55%;
-position: absolute;
-left: -1.5em;
-bottom: -1.5em;
-z-index: 2;
-}
-
-footer {
-height: fit-content;
-font-family: tangerine;
-font-size: 25px;
-color: #60503b;
-margin-left: 8.3em;
-margin-top: .8em;
-z-index: 20;
-position: relative;
-
-a {
-
-color: #884d00;
-}
-}
-
-footer a:hover {
-font-weight: bold;
-}
+      background-position: center;
+      font-family: Aref Ruqaa;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: Tangerine;
+      padding: 0;
+      margin: 0;
+      color: rgba(36, 32, 29, 0.7);
+    }
+
+    h1 span {
+      font-size: .7em;
+      font-weight: 100;
+      color: #afa897;
+      transition: .8s;
+    }
+
+    h1 span:hover {
+      color: #f3e2d6;
+    }
+
+    .container {
+      width: 750px;
+      height: 900px;
+      margin: 50px auto;
+      padding: 1px;
+      gap: 5px;
+      position: relative;
+      z-index: 50;
+      color: #2f2217;
+      animation: fade 0.4s ease;
+    }
+
+    header {
+      width: 100%;
+      height: 9%;
+      position: relative;
+      border-bottom: dashed 1px #154176;
+      animation: var(--fade) 0.4s backwards;
+    }
+
+    header h1 {
+      position: absolute;
+      bottom: -13.4px;
+      left: 5px;
+      font-size: 3em;
+    }
+
+    .top {
+      height: 55%;
+      display: flex;
+      gap: 5px;
+    }
+
+    .bottom {
+      height: 36%;
+      display: flex;
+      gap: 10px;
+    }
+
+    .one {
+      width: 65%;
+      height: 100%;
+    }
+
+    .two {
+      width: 34.4%;
+      height: 100%;
+      position: relative;
+    }
+
+    main,
+    .status {
+      border: var(--frame);
+      border-image: var(--frame-image);
+      padding: 5px;
+      
+    }
+
+    main {
+      width: 100%;
+      height: 55%;
+      margin-top: 5px;
+      background: url(/index/main.webp);
+      background-size: cover;
+      box-shadow: inset 0em 16em rgba(32, 30, 27, 0.65);
+      font-size: 15px;
+      color: #fff4ed;
+      animation: var(--fade) 0.8s backwards;
+      background-clip: padding-box;
+    }
+
+    .labdanum {
+      width: 20%;
+      float: left;
+      margin-top: 15px;
+      margin-right: 5px;
+      filter: brightness(0.95);
+    }
+
+    .divider {
+      width: 100%;
+      margin-top: 20px;
+      filter: drop-shadow(1px 1px #914823) drop-shadow(-1px -1px #914823) drop-shadow(-1px 1px #914823) drop-shadow(1px -1px #914823);
+      animation: var(--fade) 1.2s backwards;
+    }
+
+    #player {
+      display: flex;
+      width: 100%;
+      height: 30%;
+      padding: 5px;
+      margin-top: 10px;
+      border: 3px double #736e60;
+      background: linear-gradient(0deg, rgba(216, 216, 134, 0.96) 0%, rgba(252, 252, 182, 0.82) 80%);
+      animation: var(--fade) 1.4s backwards;
+    }
+
+    #player:hover {
+      position: relative;
+      z-index: 1;
+    }
+
+    #player a {
+      color: #321a0c;
+    }
+
+    #player a:hover {
+      color: #5d3a00;
+      font-style: italic;
+    }
+
+    #player-album-art {
+      width: 28%;
+    }
+
+    #player-content {
+      width: 69%;
+      margin-left: 5px;
+    }
+
+    #player-song {
+      margin-top: -8px;
+      padding: 0;
+      font-weight: 600;
+      font-size: 1.2em;
+      color: #564430;
+      word-break: break-all;
+    }
+
+    #player-artist {
+      font-style: italic;
+    }
+
+    #player-status {
+      display: none;
+    }
+
+    #player-progress-container {
+      height: 5px;
+      margin: 5px 0;
+      border: 1px #867872 solid;
+      background: #d2c2b5;
+    }
+
+    #player-progress {
+      height: 100%;
+      background: #ede4df;
+      border-right: 1px #695d58 solid;
+    }
+
+    #player-time {
+      font-size: 0.75em;
+      text-align: right;
+    }
+
+    #player-links {
+      font-size: 0.8em;
+      text-align: right;
+      text-transform: lowercase;
+    }
+
+    .side,
+    .side2 {
+      position: absolute;
+      height: 100%;
+    }
+
+    .side {
+      top: -0.5em;
+      left: -2.1em;
+      animation: var(--fade) 1.6s backwards;
+    }
+
+    .side2 {
+      right: -2em;
+      z-index: -1;
+      animation: var(--fade) 1.8s backwards;
+    }
+
+    nav {
+      width: 25%;
+      height: 87%;
+      padding-top: 5px;
+      position: relative;
+      z-index: 10;
+      background-color: rgba(93, 82, 54, 0.67);
+      border: 3px double #393024;
+      animation: var(--fade) 1.9s backwards;
+    }
+
+    nav h1,
+    #lastfm-top h2 {
+      color: var(--gold);
+      text-shadow: var(--outline);
+    }
+
+    nav h1 {
+      position: absolute;
+      bottom: -0.4em;
+      left: -0.4em;
+      font-size: 3em;
+    }
+
+    nav a {
+      display: block;
+      width: 100%;
+      margin: 5px;
+      padding-bottom: 4px;
+      color: #dac39b;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      padding-left: 4px;
+      font-weight: bold;
+      color: #ffc58a;
+      text-decoration: none;
+      text-shadow: var(--outline);
+      background: linear-gradient(90deg, #fffab075 0%, #dcd0ae00 100%);
+      animation: fade 0.1s;
+    }
+
+    nav a:hover::before {
+      content: '⊱';
+      padding-right: 5px;
+    }
+
+    nav p {
+      position: absolute;
+      bottom: -5.5em;
+      left: -1em;
+      width: 200px;
+      font-size: 0.5em;
+      font-style: italic;
+      color: #d1c6b7;
+      animation: var(--fade) 2.1s backwards;
+    }
+
+    #lastfm-top {
+      width: 30%;
+      height: 100%;
+      overflow: auto;
+      animation: var(--fade) 2.3s backwards;
+    }
+
+    #lastfm-top h2 {
+      margin: -0.4em 0 -0.65em 5px;
+    }
+
+    #lastfm-top a {
+      color: #ebd9bd;
+    }
+
+    .track-art {
+      min-width: 30%;
+      margin-right: 5px;
+    }
+
+    .track-title {
+      padding: 0;
+      font-weight: 600;
+      color: #4b0000;
+    }
+
+    .track-artist {
+      font-size: 0.8em;
+      font-style: italic;
+    }
+
+    .track-info {
+      display: block;
+      float: right;
+      margin-top: -.5em;
+      color: #391400;
+    }
+
+    .music-row {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      width: 97%;
+      margin: 10px 0;
+      padding: 5px;
+      background: rgba(141, 96, 71, 0.73);
+      border: 3px double #452e15;
+    }
+
+    .button {
+      animation: var(--fade) 2.5s backwards;
+    }
+
+    .buttons2 {
+      width: 89px;
+      height: 88%;
+      overflow: auto;
+      image-rendering: pixelated;
+      animation: var(--fade) 2.5s backwards;
+    }
+
+    .buttons2 img {
+      width: 100%;
+    }
+
+    .section {
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+    .status {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 35%;
+      overflow: auto;
+      background: url(/index/status.webp);
+      background-size: cover;
+      box-shadow: inset 0em 5em rgba(62, 45, 21, 0.65);
+      color: #fff3e4;
+      animation: var(--fade) 2.7s backwards;
+      background-clip: padding-box;
+    }
+
+    #content {
+      margin: 5px 0 0 5px;
+    }
+
+    #hour {
+      position: absolute;
+      right: 5px;
+      bottom: 1px;
+      font-size: .75em;
+      font-style: italic;
+    }
+
+    .cliques {
+      width: 100%;
+      height: 63%;
+      margin-top: 5px;
+      font-size: 0.7em;
+      text-align: center;
+      color: #ffe4d6;
+      animation: var(--fade) 2.9s backwards;
+    }
+
+    .cliques a {
+      color: #cfa995;
+      font-style: italic;
+      text-decoration: none;
+    }
