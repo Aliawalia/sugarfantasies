@@ -88,7 +88,7 @@ const API_KEY = "4f9b192a761908e1ad7c834d252a2b56";
               .then((data) => {
                 if (data.hasOwnProperty("ERROR")) {
                   document.getElementById("player-song").innerHTML =
-                    `${spotifyUser} isn't listening to anything right now!`;
+                    `Silence...`;
                   document.getElementById("player-artist").innerHTML = "Nothing";
                   return;
                 }
