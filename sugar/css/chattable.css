@@ -1,23 +1,24 @@
-@import url(https://fonts.bunny.net/css?family=aref-ruqaa:400|tangerine:400);
-body {
-    background:#fffaea;
 
-                font-family:"Aref ruqaa";}
+
+    @font-face {
+      font-family: "Dante";
+      src: url("https://file.garden/Zj1sfPoh-G9Y8BHe/Dante.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+body {
+    background:#E6EDF0;
+
+                font-family:"Dante";}
 
 
 
 
 .allMessages {
-    font-size: 11px;
+    font-size: 1.1em;
     display: inline-block;
     clear: both;
     max-width: 70%;
-}
-.allMessages > p {
-    animation-name: hue;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 .msgWrapper {
     display: flex;
@@ -35,19 +36,17 @@ body {
 }
 .sent {
   animation-direction: alternate-reverse;
-  background: #ffe0ef;
-  border: 1px solid #ffbade;
-  border-radius: 10px 0px 10px 10px;
+  background: #E8F2FF;
+  border: 1px solid #BADDFF;
   padding: 6px 12px;
-  box-shadow: inset 1px 2px 0px rgba(255, 255, 255, 0.7), inset -1px -2px 2px rgba(215, 127, 171, 0.1), 0 2px 4px rgba(215, 127, 171, 0.05);}
+}
 
 .recieved {  animation-direction: alternate-reverse;
-  background: #fffae0;
-  border: 1px solid #ffe7ba;
-  border-radius: 0px 10px 10px 10px;
+  background: #E8FCFF;
+  border: 1px solid #B3C1C7;
   padding: 6px 12px;
-  box-shadow: inset 1px 2px 0px rgba(255, 255, 255, 0.7), inset -1px -2px 2px rgba(215, 181, 127, 0.1), 0 2px 4px rgba(215, 185, 127, 0.05);}
-.sent + #timestamp {
+}
+  .sent + #timestamp {
     text-align: right !important;
 }
 .recieved + #timestamp {
@@ -65,7 +64,7 @@ body {
 }
 #input {
     background-color: #fff;
-    border-radius: 0;  border-top: 1px solid #ffd49d;
+    border-radius: 0;  border-top: 1px solid #B3C1C7;
 }
 #input:empty::before {
     content: "Say Something!";
