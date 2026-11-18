@@ -35,9 +35,8 @@ body {
     justify-content: flex-end;
 }
 .sent {
-  animation-direction: alternate-reverse;
-  background: #E8F2FF;
-  border: 1px solid #BADDFF;
+  animation-direction: alternate-reverse;  background: #FFF;
+  border: 1px solid #9DC3E7;
   padding: 6px 12px;
 }
 
