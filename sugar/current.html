@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#D1FDFF" />
+    <meta name="description" content="resin seeping from a tree named cistus" />
+    <meta property="og:title" content="Labdanum" />
+    <meta
+      property="og:description"
+      content="resin seeping from a tree named cistus"
+    />
+    <meta property="twitter:title" content="Labdanum" />
+    <link rel="stylesheet" href="css/current.css" />
+    <title>Currently</title>
+    <style>
+      html {
+        scrollbar-color: #000000 transparent;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      ::selection {
+        color: #ffffff;
+        background: #0490dd;
+      }
+
+      body {
+        background: url(/fun/bg.webp);
+        background-size: cover;
+        font-family: MS Pgothic;
+      }
+      .container {
+        width: 800px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 80px;
+        gap: 2%;
+      }
+      .left {
+        width: 28%;
+        background-color: #0490dd;
+        height: 700px;
+      }
+      .right {
+        width: 70%;
+        background-color: #0490dd;
+      }
+      .me {
+        width: 97%;
+        border: 2px white solid;
+        outline: rgb(0, 0, 0) 1px dashed;
+        box-shadow: rgb(255, 255, 255) 0 0 0px 3px;
+        margin: 0 auto;
+        display: block;
+        position: sticky;
+        top: 10px;
+      }
+      .aa {
+        width: 97%;
+        border: 2px white solid;
+        outline: rgb(0, 0, 0) 1px dashed;
+        box-shadow: rgb(255, 255, 255) 0 0 0px 3px;
+        background: white;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+      .aa h1 {
+        color: white;
+        text-shadow:
+          1px 1px 0 #2c1700,
+          -1px -1px 0 #2c1700,
+          -1px 1px 0 #2c1700,
+          1px -1px 0 #2c1700;
+        border-bottom: rgb(0, 0, 0) 1px dashed;
+        margin: 5px 0px 5px 0px;
+        padding-left: 5px;
+      }
+      .left p {
+        margin: 10px 0px 5px 10px;
+      }
+      #status-blob {
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-top: 5px;
+      }
+
+      #status-details {
+        margin: 0px 0px 0px 10px;
+        padding-right: 5px;
+      }
+
+      .status {
+        display: flex;
+        flex-direction: row;
+      }
+      .current {
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="/fun/me.webp" class="me" />
+        <div class="aa">
+          <h1>Me</h1>
+          <p class="current">
+            currently :
+            <a href="https://www.imood.com/users/aliaa"
+              ><img
+                src="https://moods.imood.com/display/uname-aliaa/trans-1/imood.gif"
+                alt="The current mood of aliaa at www.imood.com"
+                style="border: 0px; position: absolute; top: 3px"
+            /></a>
+          </p>
+          <div class="status">
+            <p id="status-details">loading...</p>
+            <div id="status-blob"></div>
+            <script>
+              async function discordChecker() {
+                try {
+                  const response = await fetch(
+                    "https://api.lanyard.rest/v1/users/961454132064026684",
+                  );
+                  const splingus = await response.json();
+                  document.getElementById("status-details").innerHTML = `
+      <b>${splingus.data.discord_user.username}</b> : ${splingus.data.discord_status}
+      `;
+                  const statusColors = {
+                    online: "#47c767",
+                    idle: "rgb(203, 165, 84)",
+                    dnd: "#c7474d",
+                    offline: "#5d5d5d",
+                  };
+                  document.getElementById("status-blob").style.backgroundColor =
+                    statusColors[splingus.data.discord_status];
+                } catch (error) {
+                  console.error("failed to fetch!!", error);
+                }
+              }
+
+              discordChecker();
+              setInterval(discordChecker, 2000);
+            </script>
+          </div>
+          <div id="site-stats">loading stats...</div>
+
+          <script>
+            fetch("https://neocities.org/api/info?sitename=labdanum")
+              .then((r) => r.json())
+              .then((data) => {
+                if (data.result !== "success") throw new Error("API error");
+                const { views, hits, last_updated } = data.info;
+
+                const updated = new Date(last_updated).toLocaleDateString(
+                  "en-US",
+                  {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  },
+                );
+
+                document.getElementById("site-stats").innerHTML =
+                  `views: ${views.toLocaleString()}<br>` +
+                  `hits: ${hits.toLocaleString()}<br>` +
+                  `last updated: ${updated}`;
+              })
+              .catch(() => {
+                document.getElementById("site-stats").textContent =
+                  "stats unavailable";
+              });
+          </script>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
