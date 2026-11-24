@@ -144,6 +144,7 @@
         height: 32.5%;
         border: #4d575c 1px solid;
         text-align: right;
+                overflow: auto;
       }
 
       nav h1 {
@@ -155,6 +156,8 @@
         padding: 2px 5px 0px 0px;
         border-bottom: #4d575c 1px dashed;
         color: rgb(37, 45, 121);
+                position: sticky;
+  top: 0;
       }
 
       nav a {
