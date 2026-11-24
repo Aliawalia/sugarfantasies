@@ -207,8 +207,8 @@ canvas {
   cursor: pointer;
 }
  
-.stroke_color:hover {
-  border: 3px solid var(--hover-border-color);
+.stroke_color:hover { 
+  border: 2px solid rgb(0, 0, 0);
 }
  
 .slider {
