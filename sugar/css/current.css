@@ -245,7 +245,9 @@ button {
   width: 47%;
   background: var(--white);
 }
- 
+ .image-container p{
+   margin:2px;
+ }
 .image-container img {
   max-width: 100%;
   height: auto;
