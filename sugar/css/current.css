@@ -1,0 +1,255 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --accent: #5272b8;
+  --selection: #0490dd;
+  --stroke-brown: #2c1700;
+  --field-bg: rgb(246, 253, 255);
+  --field-border-color: rgb(112, 153, 201);
+  --thumb-border-color: rgb(185, 194, 204);
+  --hover-border-color: rgb(132, 132, 132);
+  --frame-border: 2px solid var(--white);
+  --frame-outline: 1px dashed var(--black);
+  --frame-shadow: 0 0 0 3px var(--white);
+  --field-border: 1px dashed var(--field-border-color);
+  --font: "MS PGothic", "MS Pgothic", sans-serif;
+}
+ 
+html {
+  scrollbar-color: var(--black) transparent;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+::selection {
+  color: var(--white);
+  background: var(--selection);
+}
+ 
+body {
+  background: url(/fun/bg.webp);
+  background-size: cover;
+  font-family: var(--font);
+}
+
+.me,
+.aa,
+.music-row,
+.image-container,
+#controls,
+#drawboxcanvas {
+  border: var(--frame-border);
+  outline: var(--frame-outline);
+  box-shadow: var(--frame-shadow);
+}
+ 
+input,
+select,
+button {
+  background: var(--field-bg);
+  border: var(--field-border);
+  font-family: inherit;
+}
+ 
+select,
+button {
+  border-radius: 2px;
+}
+ 
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 0 10px;
+  display: flex;
+  margin: 80px auto 0;
+  gap: 2%;
+}
+ 
+.left {
+  width: 33%;
+}
+ 
+.right {
+  width: 65%;
+}
+ 
+.left h2 {
+  margin-top: 15px;
+}
+ 
+.left p {
+  margin: 0 0 0 10px;
+}
+ 
+h1,
+h2 {
+  color: var(--white);
+  text-shadow:
+    1px 1px 0 var(--stroke-brown),
+    -1px -1px 0 var(--stroke-brown),
+    -1px 1px 0 var(--stroke-brown),
+    1px -1px 0 var(--stroke-brown);
+  border-bottom: var(--frame-outline);
+  margin: 5px 0;
+  padding-left: 5px;
+}
+ 
+.me,
+.aa {
+  width: 97%;
+  margin: 0 auto;
+}
+ 
+.me {
+  display: block;
+}
+ 
+.aa {
+  background: var(--white);
+  margin-top: 15px;
+}
+ 
+.status {
+  display: flex;
+  flex-direction: row;
+}
+ 
+#status-blob {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin-top: 5px;
+}
+ 
+#status-details {
+  margin: 0 0 0 10px;
+  padding-right: 5px;
+}
+ 
+.current {
+  position: relative;
+}
+ 
+.music-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin: 10px 0 5px;
+  background: var(--white);
+  padding: 5px;
+  width: 97%;
+}
+ 
+.track-art {
+  min-width: 30%;
+  width: 30%;
+  margin-right: 5px;
+}
+ 
+.track-title a {
+  font-weight: 600;
+  padding: 0;
+  color: var(--accent);
+}
+ 
+.track-artist {
+  font-size: 0.8em;
+  font-style: italic;
+}
+ 
+.track-info {
+  display: block;
+  float: right;
+  margin-top: -0.5em;
+  color: var(--black);
+}
+ 
+canvas {
+  cursor: crosshair;
+  touch-action: none;
+}
+ 
+#controls {
+  width: 98%;
+  padding: 5px;
+  background: var(--white);
+  margin: 0 auto 5px;
+  display: block;
+  position: relative;
+}
+ 
+#drawboxcanvas {
+  width: 98%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  margin: 10px auto 0;
+  display: block;
+  background: var(--white);
+}
+ 
+#colorpicker {
+  border: var(--frame-outline);
+  background: var(--white);
+}
+ 
+.colorPalette {
+  display: none;
+  flex-wrap: wrap;
+}
+ 
+.stroke_color {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--black);
+  margin: 5px 0 0 5px;
+  cursor: pointer;
+}
+ 
+.stroke_color:hover {
+  border: 3px solid var(--hover-border-color);
+}
+ 
+.slider {
+  width: 65%;
+  height: 15px;
+  margin-top: 0;
+  right: 20px;
+  border-radius: 8px;
+  position: absolute;
+  cursor: pointer;
+}
+ 
+.slider::-moz-range-thumb {
+  width: 12px;
+  height: 13px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 1px solid var(--thumb-border-color);
+}
+ 
+button {
+  margin: 2px;
+}
+ 
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+ 
+.image-container {
+  padding: 5px;
+  text-align: center;
+  width: 47%;
+  background: var(--white);
+}
+ 
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+ 
