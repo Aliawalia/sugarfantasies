@@ -169,28 +169,39 @@ const GOOGLE_FORM_ID =
       colorpicker.addEventListener("input", () => setColor(colorpicker.value));
 
       const PALETTES = {
-        Basic: [
-          ["Red", "#ff0000"],
-          ["Blue", "#0000ff"],
-          ["Yellow", "#ffff00"],
-          ["Green", "#00ff00"],
-          ["Cyan", "#00ffff"],
-          ["Magenta", "#ff00ff"],
-          ["Black", "#000000"],
+        Pastels: [
+          ["Powder Blush", "#FFADAD"],
+          ["Apricot Cream", "#FFD6A5"],
+          ["Lemon Chiffon", "#FDFFB6"],
+          ["Tea Green", "#CAFFBF"],
+          ["Soft Cyan", "#9BF6FF"],
+          ["Baby Blue Ice", "#A0C4FF"],
+          ["Periwinkle", "#FFC6FF"],
+          ["Mauve", "#000000"],
         ],
-        Pink: [
-          ["Soft Blush", "#ffe5ec"],
-          ["Pastel Pink", "#ffc2d1"],
-          ["Cherry Blossom", "#ffb3c6"],
-          ["Cotton Candy", "#ff8fab"],
-          ["Petal Rouge", "#fb6f92"],
+        Vibrant: [
+          ["Strawberry Red", "#f94144"],
+          ["Pumpkin Spice", "#f3722c"],
+          ["Atomic Tangerine", "#f9844a"],
+          ["Carrot Orange", "#f8961e"],
+          ["Tuscan Sun", "#f9c74f"],
+          ["Willow Green", "#90be6d"],
+          ["Seaweed", "#43aa8b"],
+          ["Dark Cyan", "#4d908e"],
+          ["Cerulean", "#277da1"],
+          ["Blue Slate", "#577590"],
         ],
-        AutumnHarvest: [
-          ["Dark Wine", "#6f1d1b"],
-          ["Camel", "#bb9457"],
-          ["Dark Coffee", "#432818"],
-          ["Chocolate Brown", "#99582a"],
-          ["Light Apricot", "#ffe6a7"],
+        Browns: [
+          ["Antique White", "#ffedd8"],
+          ["Soft Apricot", "#f3d5b5"],
+          ["Tan", "#e7bc91"],
+          ["Light Bronze", "#d4a276"],
+          ["Camel", "#bc8a5f"],
+          ["Faded Copper", "#a47148"],
+          ["Olive Wood", "#8b5e34"],
+          ["Walnut", "#6f4518"],
+          ["Walnut", "#603808"],
+          ["Walnut", "#583101"],
         ],
       };
 
