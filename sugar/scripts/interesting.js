@@ -177,7 +177,7 @@ const GOOGLE_FORM_ID =
           ["Soft Cyan", "#9BF6FF"],
           ["Baby Blue Ice", "#A0C4FF"],
           ["Periwinkle", "#FFC6FF"],
-          ["Mauve", "#000000"],
+          ["Black", "#000000"],
         ],
         Vibrant: [
           ["Strawberry Red", "#f94144"],
