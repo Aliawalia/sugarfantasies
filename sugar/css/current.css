@@ -59,8 +59,7 @@ button {
 }
  
 .container {
-  width: 100%;
-  max-width: 700px;
+  width: 700px;
   padding: 0 10px;
   display: flex;
   margin: 80px auto 0;
